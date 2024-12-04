@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - develop
+    - aux-dev
   pull_request:
     branches:
     - develop
