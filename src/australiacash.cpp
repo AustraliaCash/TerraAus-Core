@@ -79,7 +79,8 @@ unsigned int CalculateAustraliaCashNextWorkRequired(const CBlockIndex* pindexLas
 
         // If average block time exceeds 4x the target spacing, use minimum difficulty
         if (nBlockTimeAvg > pindexLast->GetBlockTime() + params.nPowTargetSpacing * 4) {
-            return params.powLimit.GetCompact();
+            return (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing * 8);
+            // params.powLimit.GetCompact();
         }
     }
 
