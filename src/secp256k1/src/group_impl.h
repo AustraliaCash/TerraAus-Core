@@ -36,8 +36,8 @@
  *    split the hex output into 4-byte chunks.
  *   print "%x %x" % P.xy()
  */
-#if defined(EXHAUSTIVE_TEST_ORDER)
-#  if EXHAUSTIVE_TEST_ORDER == 199
+#if defined(EXHtAUSTIVE_TEST_ORDER)
+#  if EXHtAUSTIVE_TEST_ORDER == 199
 const secp256k1_ge secp256k1_ge_const_g = SECP256K1_GE_CONST(
     0xFA7CC9A7, 0x0737F2DB, 0xA749DD39, 0x2B4FB069,
     0x3B017A7D, 0xA808C2F1, 0xFB12940C, 0x9EA66C18,
@@ -46,7 +46,7 @@ const secp256k1_ge secp256k1_ge_const_g = SECP256K1_GE_CONST(
 );
 
 const int CURVE_B = 4;
-#  elif EXHAUSTIVE_TEST_ORDER == 13
+#  elif EXHtAUSTIVE_TEST_ORDER == 13
 const secp256k1_ge secp256k1_ge_const_g = SECP256K1_GE_CONST(
     0xedc60018, 0xa51a786b, 0x2ea91f4d, 0x4c9416c0,
     0x9de54c3b, 0xa1316554, 0x6cf4345c, 0x7277ef15,

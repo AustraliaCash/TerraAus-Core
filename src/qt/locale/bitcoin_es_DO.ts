@@ -142,8 +142,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
-        <translation>Enviar monedas a una dirección AustraliaCash</translation>
+        <source>Send coins to a tAustraliaCash address</source>
+        <translation>Enviar monedas a una dirección tAustraliaCash</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
-        <translation>AustraliaCash</translation>
+        <source>tAustraliaCash</source>
+        <translation>tAustraliaCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones AustraliaCash para demostrar la propiedad</translation>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones tAustraliaCash para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AustraliaCash addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones AustraliaCash concretas</translation>
+        <source>Verify messages to ensure they were signed with specified tAustraliaCash addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones tAustraliaCash concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -218,8 +218,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de AustraliaCash)</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Solicitar pagos (genera codigo QR y URL's de tAustraliaCash)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -230,8 +230,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a australiacash: URI or payment request</source>
-        <translation>Abrir un australiacash: URI o petición de pago</translation>
+        <source>Open a taustraliacash: URI or payment request</source>
+        <translation>Abrir un taustraliacash: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -494,8 +494,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente AustraliaCash en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente tAustraliaCash en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -589,8 +589,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AustraliaCash network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red AustraliaCash después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tAustraliaCash network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red tAustraliaCash después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1019,8 +1019,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección AustraliaCash</translation>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección tAustraliaCash</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1039,8 +1039,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AustraliaCash address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección AustraliaCash indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified tAustraliaCash address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección tAustraliaCash indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1123,8 +1123,8 @@
 </translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
-        <translation>Núcleo de AustraliaCash</translation>
+        <source>tAustraliaCash Core</source>
+        <translation>Núcleo de tAustraliaCash</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

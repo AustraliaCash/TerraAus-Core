@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2022 The AustraliaCash Core developers
+// Copyright (c) 2022 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -162,8 +162,8 @@ void OverviewPage::UpdateTip()
         tr("Always do your own research before using an external cryptocurrency service"),
         tr("Never share your private key with anyone"),
         tr("Who owns the private keys, owns the coins"),
-        tr("To see ongoing development and contribute, check out the AustraliaCash Core repository on GitHub"),
-        tr("Services that claim to double your australiacashs are always ponzi schemes")
+        tr("To see ongoing development and contribute, check out the tAustraliaCash Core repository on GitHub"),
+        tr("Services that claim to double your taustraliacashs are always ponzi schemes")
     };
 
     int i = rand() % tips.length();

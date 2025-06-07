@@ -29,10 +29,10 @@ SECP256K1_INLINE static unsigned int secp256k1_scalar_get_bits_var(const secp256
     return secp256k1_scalar_get_bits(a, offset, count);
 }
 
-SECP256K1_INLINE static int secp256k1_scalar_check_overflow(const secp256k1_scalar *a) { return *a >= EXHAUSTIVE_TEST_ORDER; }
+SECP256K1_INLINE static int secp256k1_scalar_check_overflow(const secp256k1_scalar *a) { return *a >= EXHtAUSTIVE_TEST_ORDER; }
 
 static int secp256k1_scalar_add(secp256k1_scalar *r, const secp256k1_scalar *a, const secp256k1_scalar *b) {
-    *r = (*a + *b) % EXHAUSTIVE_TEST_ORDER;
+    *r = (*a + *b) % EXHtAUSTIVE_TEST_ORDER;
     return *r < *b;
 }
 
@@ -45,11 +45,11 @@ static void secp256k1_scalar_cadd_bit(secp256k1_scalar *r, unsigned int bit, int
 }
 
 static void secp256k1_scalar_set_b32(secp256k1_scalar *r, const unsigned char *b32, int *overflow) {
-    const int base = 0x100 % EXHAUSTIVE_TEST_ORDER;
+    const int base = 0x100 % EXHtAUSTIVE_TEST_ORDER;
     int i;
     *r = 0;
     for (i = 0; i < 32; i++) {
-       *r = ((*r * base) + b32[i]) % EXHAUSTIVE_TEST_ORDER;
+       *r = ((*r * base) + b32[i]) % EXHtAUSTIVE_TEST_ORDER;
     }
     /* just deny overflow, it basically always happens */
     if (overflow) *overflow = 0;
@@ -68,7 +68,7 @@ static void secp256k1_scalar_negate(secp256k1_scalar *r, const secp256k1_scalar 
     if (*a == 0) {
         *r = 0;
     } else {
-        *r = EXHAUSTIVE_TEST_ORDER - *a;
+        *r = EXHtAUSTIVE_TEST_ORDER - *a;
     }
 }
 
@@ -77,7 +77,7 @@ SECP256K1_INLINE static int secp256k1_scalar_is_one(const secp256k1_scalar *a) {
 }
 
 static int secp256k1_scalar_is_high(const secp256k1_scalar *a) {
-    return *a > EXHAUSTIVE_TEST_ORDER / 2;
+    return *a > EXHtAUSTIVE_TEST_ORDER / 2;
 }
 
 static int secp256k1_scalar_cond_negate(secp256k1_scalar *r, int flag) {
@@ -86,7 +86,7 @@ static int secp256k1_scalar_cond_negate(secp256k1_scalar *r, int flag) {
 }
 
 static void secp256k1_scalar_mul(secp256k1_scalar *r, const secp256k1_scalar *a, const secp256k1_scalar *b) {
-    *r = (*a * *b) % EXHAUSTIVE_TEST_ORDER;
+    *r = (*a * *b) % EXHtAUSTIVE_TEST_ORDER;
 }
 
 static int secp256k1_scalar_shr_int(secp256k1_scalar *r, int n) {
@@ -99,7 +99,7 @@ static int secp256k1_scalar_shr_int(secp256k1_scalar *r, int n) {
 }
 
 static void secp256k1_scalar_sqr(secp256k1_scalar *r, const secp256k1_scalar *a) {
-    *r = (*a * *a) % EXHAUSTIVE_TEST_ORDER;
+    *r = (*a * *a) % EXHtAUSTIVE_TEST_ORDER;
 }
 
 static void secp256k1_scalar_split_128(secp256k1_scalar *r1, secp256k1_scalar *r2, const secp256k1_scalar *a) {

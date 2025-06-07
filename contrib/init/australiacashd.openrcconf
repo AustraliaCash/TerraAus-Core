@@ -1,33 +1,33 @@
-# /etc/conf.d/australiacashd: config file for /etc/init.d/australiacashd
+# /etc/conf.d/taustraliacashd: config file for /etc/init.d/taustraliacashd
 
 # Config file location
-#AUSCOIND_CONFIGFILE="/etc/australiacash/australiacash.conf"
+#tAUSCASHD_CONFIGFILE="/etc/taustraliacash/taustraliacash.conf"
 
-# What directory to write pidfile to?  (created and owned by $AUSCOIND_USER)
-#AUSCOIND_PIDDIR="/var/run/australiacashd"
+# What directory to write pidfile to?  (created and owned by $tAUSCASHD_USER)
+#tAUSCASHD_PIDDIR="/var/run/taustraliacashd"
 
 # What filename to give the pidfile
-#AUSCOIND_PIDFILE="${AUSCOIND_PIDDIR}/australiacashd.pid"
+#tAUSCASHD_PIDFILE="${tAUSCASHD_PIDDIR}/taustraliacashd.pid"
 
-# Where to write australiacashd data (be mindful that the blockchain is large)
-#AUSCOIND_DATADIR="/var/lib/australiacashd"
+# Where to write taustraliacashd data (be mindful that the blockchain is large)
+#tAUSCASHD_DATADIR="/var/lib/taustraliacashd"
 
-# User and group to own australiacashd process
-#AUSCOIND_USER="australiacash"
-#AUSCOIND_GROUP="australiacash"
+# User and group to own taustraliacashd process
+#tAUSCASHD_USER="taustraliacash"
+#tAUSCASHD_GROUP="taustraliacash"
 
-# Path to australiacashd executable
-#AUSCOIND_BIN="/usr/bin/australiacashd"
+# Path to taustraliacashd executable
+#tAUSCASHD_BIN="/usr/bin/taustraliacashd"
 
-# Nice value to run australiacashd under
-#AUSCOIND_NICE=0
+# Nice value to run taustraliacashd under
+#tAUSCASHD_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-AUSCOIND_OPTS="-disablewallet"
+tAUSCASHD_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for australiacashd to terminate
+# The timeout in seconds OpenRC will wait for taustraliacashd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-AUSCOIND_SIGTERM_TIMEOUT=60
+tAUSCASHD_SIGTERM_TIMEOUT=60

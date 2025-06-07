@@ -1,6 +1,6 @@
 [Protocol]
-exec=australiacash-qt '%u'
-protocol=australiacash
+exec=taustraliacash-qt '%u'
+protocol=taustraliacash
 input=none
 output=none
 helper=true

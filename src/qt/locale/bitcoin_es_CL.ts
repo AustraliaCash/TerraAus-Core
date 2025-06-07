@@ -142,8 +142,8 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
-        <translation>Enviar monedas a una dirección australiacash</translation>
+        <source>Send coins to a tAustraliaCash address</source>
+        <translation>Enviar monedas a una dirección taustraliacash</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
-        <translation>AustraliaCash</translation>
+        <source>tAustraliaCash</source>
+        <translation>tAustraliaCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -186,7 +186,7 @@
         <translation>&amp;Mostrar/Ocultar</translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and australiacash: URls)</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and taustraliacash: URls)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -363,8 +363,8 @@
         <translation>experto</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abre automáticamente el puerto del cliente AustraliaCash en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente tAustraliaCash en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -687,7 +687,7 @@
         <translation>Firma</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -772,8 +772,8 @@
 </translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
-        <translation>australiacash core</translation>
+        <source>tAustraliaCash Core</source>
+        <translation>taustraliacash core</translation>
     </message>
     <message>
         <source>Error loading block database</source>

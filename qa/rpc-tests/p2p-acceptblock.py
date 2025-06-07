@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2016 The Bitcoin Core developers
-# Copyright (c) 2021 The AustraliaCash Core developers
+# Copyright (c) 2021 The tAustraliaCash Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -129,8 +129,8 @@ class TestNode(NodeConnCB):
 class AcceptBlockTest(BitcoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("AUSCOIND", "australiacashd"),
-                          help="australiacashd binary to test")
+                          default=os.getenv("tAUSCASHD", "taustraliacashd"),
+                          help="taustraliacashd binary to test")
 
     def __init__(self):
         super().__init__()

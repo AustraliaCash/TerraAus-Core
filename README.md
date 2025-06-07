@@ -1,5 +1,5 @@
-# AustraliaCash-Core
-AUS-Cash Core Auxilary Proof Of Work Wallet
+# tAustraliaCash-Core
+tAUS-Cash Core Auxilary Proof Of Work Wallet
 v2.01.03.00
 ####	About
 
@@ -24,7 +24,7 @@ v2.01.03.00
 >       Proceed to the releases section of this GitHub
 >       Find the latest release at top of page (Latest 2.01.03.0)
 >       Download the compressed file for your operating system
->       Unzip and double click the AustraliaCash-qt file
+>       Unzip and double click the tAustraliaCash-qt file
 >
 >       Open ports 1986-1987 via the routers port forwarding or virtual server option for better peers connectivity.
->       Start the wallet with australiacash-qt
+>       Start the wallet with taustraliacash-qt

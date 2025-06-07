@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2020 The AustraliaCash Core developers
+// Copyright (c) 2020 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -80,7 +80,7 @@ void PaymentServerTests::paymentServerTests()
 
     // Now feed PaymentRequests to server, and observe signals it produces
 
-    // AustraliaCash: Disable certificate tests as we don't touch this code, and building test
+    // tAustraliaCash: Disable certificate tests as we don't touch this code, and building test
     // data would take significant effort. Also pending discussion on spec
     // This payment request validates directly against the
     // caCert1 certificate authority:
@@ -192,7 +192,7 @@ void PaymentServerTests::paymentServerTests()
     QCOMPARE(PaymentServer::verifySize(tempFile.size()), false);
 
     // Payment request with amount overflow (amount is set to 21000001 BTC):
-    /* PL: This doesn't work for AustraliaCash (as there is no actual maximum coins)
+    /* PL: This doesn't work for tAustraliaCash (as there is no actual maximum coins)
      *     I'm disabling this test for now.
     data = DecodeBase64(paymentrequest5_cert2_BASE64);
     byteArray = QByteArray((const char*)&data[0], data.size());

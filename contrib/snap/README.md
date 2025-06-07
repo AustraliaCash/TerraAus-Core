@@ -18,7 +18,7 @@ snap install \*.snap --devmode
 ### To Push to Snapcraft
 ```
 snapcraft login
-snapcraft register australiacash-core
+snapcraft register taustraliacash-core
 snapcraft push \*.snap --release=edge
-sudo snap install australiacash-core --channel=edge
+sudo snap install taustraliacash-core --channel=edge
 ```

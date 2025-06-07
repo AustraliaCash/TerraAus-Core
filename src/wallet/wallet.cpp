@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2022 The AustraliaCash Core developers
+// Copyright (c) 2022 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,8 +9,8 @@
 #include "base58.h"
 #include "checkpoints.h"
 #include "chain.h"
-#include "australiacash.h"
-#include "australiacash-fees.h"
+#include "taustraliacash.h"
+#include "taustraliacash-fees.h"
 #include "wallet/coincontrol.h"
 #include "consensus/consensus.h"
 #include "consensus/validation.h"
@@ -60,7 +60,7 @@ CFeeRate CWallet::minTxFee = CFeeRate(DEFAULT_TRANSACTION_MINFEE);
  */
 CFeeRate CWallet::fallbackFee = CFeeRate(DEFAULT_FALLBACK_FEE);
 /**
- * AustraliaCash: Effective dust limit for the wallet
+ * tAustraliaCash: Effective dust limit for the wallet
  * - Outputs smaller than this get rejected
  * - Change smaller than this gets discarded to fee
  */
@@ -2141,7 +2141,7 @@ static void ApproximateBestSubset(vector<pair<CAmount, pair<const CWalletTx*,uns
     }
 }
 
-// AustraliaCash: MIN_CHANGE as a function of discardThreshold and minTxFee(1000)
+// tAustraliaCash: MIN_CHANGE as a function of discardThreshold and minTxFee(1000)
 // Makes the wallet change output minimums configurable instead of hardcoded
 // defaults.
 CAmount CWallet::GetMinChange()
@@ -2507,7 +2507,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     }
 
                     /*
-                     * AustraliaCash: check all outputs against the discard threshold
+                     * tAustraliaCash: check all outputs against the discard threshold
                      *           to make sure that the wallet's dust policy gets
                      *           followed rather than the current relay rules,
                      *           because the larger network may settle on a
@@ -2694,7 +2694,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     nFeeNeeded = GetMinimumFee(txNew, nBytes, currentConfirmationTarget, mempool);
                 } else {
                     // Force the fee rate higher
-                    nFeeNeeded = GetAustraliaCashPriorityFee(txNew, nBytes, nPriority);
+                    nFeeNeeded = GettAustraliaCashPriorityFee(txNew, nBytes, nPriority);
                 }
                 if (coinControl && nFeeNeeded > 0 && coinControl->nMinimumTotalFee > nFeeNeeded) {
                     nFeeNeeded = coinControl->nMinimumTotalFee;
@@ -2735,7 +2735,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                     CAmount additionalFeeNeeded = nFeeNeeded - nFeeRet;
                     vector<CTxOut>::iterator change_position = txNew.vout.begin()+nChangePosInOut;
                     // Only reduce change if remaining amount is still a large enough output.
-                    /* AustraliaCash: this has been changed from a static MIN_FINAL_CHANGE that
+                    /* tAustraliaCash: this has been changed from a static MIN_FINAL_CHANGE that
                      * followed DEFAULT_DISCARD_THRESHOLD to instead use the configurable
                      * discard threshold.
                      *
@@ -2872,8 +2872,8 @@ bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB *pwa
 
 CAmount CWallet::GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes)
 {
-    // AustraliaCash: Add an increased fee for each output that is lower than the discard threshold
-    return std::max(minTxFee.GetFee(nTxBytes) + GetAustraliaCashDustFee(tx.vout, discardThreshold), ::minRelayTxFeeRate.GetFee(nTxBytes));
+    // tAustraliaCash: Add an increased fee for each output that is lower than the discard threshold
+    return std::max(minTxFee.GetFee(nTxBytes) + GettAustraliaCashDustFee(tx.vout, discardThreshold), ::minRelayTxFeeRate.GetFee(nTxBytes));
 }
 
 CAmount CWallet::GetRequiredFee(unsigned int nTxBytes)
@@ -2898,11 +2898,11 @@ CAmount CWallet::GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBy
         //if (nFeeNeeded == 0)
         //    nFeeNeeded = fallbackFee.GetFee(nTxBytes);
 
-        // AustraliaCash: Drop the smart fee estimate, use GetRequiredFee
+        // tAustraliaCash: Drop the smart fee estimate, use GetRequiredFee
         nFeeNeeded = GetRequiredFee(tx, nTxBytes);
     }
     // prevent user from paying a fee below minRelayTxFee or minTxFee
-    // AustraliaCash: as we're adapting minTxFee to never be higher than
+    // tAustraliaCash: as we're adapting minTxFee to never be higher than
     //           payTxFee unless explicitly set, this should be fine
     nFeeNeeded = std::max(nFeeNeeded, GetRequiredFee(tx, nTxBytes));
 
@@ -2914,20 +2914,20 @@ CAmount CWallet::GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBy
 }
 
 
-CAmount CWallet::GetAustraliaCashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority)
+CAmount CWallet::GettAustraliaCashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority)
 {
     // payTxFee is the user-set global for desired feerate
-    return GetAustraliaCashPriorityFee(tx, nTxBytes, nPriority, payTxFee.GetFee(nTxBytes));
+    return GettAustraliaCashPriorityFee(tx, nTxBytes, nPriority, payTxFee.GetFee(nTxBytes));
 }
-CAmount CWallet::GetAustraliaCashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority, CAmount targetFee)
+CAmount CWallet::GettAustraliaCashPriorityFee(const CMutableTransaction& tx, unsigned int nTxBytes, FeeRatePreset nPriority, CAmount targetFee)
 {
     CAmount nFeeNeeded = targetFee;
     // User didn't set: use -txconfirmtarget to estimate...
     if (nFeeNeeded == 0) {
-        nFeeNeeded = GetAustraliaCashFeeRate(nPriority).GetFee(nTxBytes);
+        nFeeNeeded = GettAustraliaCashFeeRate(nPriority).GetFee(nTxBytes);
     }
     // prevent user from paying a fee below minRelayTxFee or minTxFee
-    // AustraliaCash: as we're adapting minTxFee to never be higher than
+    // tAustraliaCash: as we're adapting minTxFee to never be higher than
     //           payTxFee unless explicitly set, this should be fine
     nFeeNeeded = std::max(nFeeNeeded, GetRequiredFee(tx, nTxBytes));
 

@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 #define BITCOIN_WALLET_COINCONTROL_H
 
 #include "primitives/transaction.h"
-#include "australiacash-fees.h"
+#include "taustraliacash-fees.h"
 
 /** Coin Control Features. */
 class CCoinControl

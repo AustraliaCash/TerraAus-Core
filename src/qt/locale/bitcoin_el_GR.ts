@@ -210,8 +210,8 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρο δισκο...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση australiacash</translation>
+        <source>Send coins to a tAustraliaCash address</source>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση taustraliacash</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -234,8 +234,8 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
-        <translation>AustraliaCash</translation>
+        <source>tAustraliaCash</source>
+        <translation>tAustraliaCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -262,12 +262,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AustraliaCash addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση AustraliaCash</translation>
+        <source>Verify messages to ensure they were signed with specified tAustraliaCash addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση tAustraliaCash</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -286,8 +286,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις australiacash: )</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις taustraliacash: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -298,8 +298,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a australiacash: URI or payment request</source>
-        <translation>Άνοιγμα australiacash: URI αίτησης πληρωμής</translation>
+        <source>Open a taustraliacash: URI or payment request</source>
+        <translation>Άνοιγμα taustraliacash: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -708,16 +708,16 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών AustraliaCash στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών tAustraliaCash στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο AustraliaCash δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <source>Connect to the tAustraliaCash network through a SOCKS5 proxy.</source>
+        <translation>Σύνδεση στο tAustraliaCash δίκτυο μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -812,8 +812,8 @@
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AustraliaCash network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο AustraliaCash μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tAustraliaCash network after a connection is established, but this process has not completed yet.</source>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο tAustraliaCash μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -893,8 +893,8 @@
         <translation>Ποσό</translation>
     </message>
     <message>
-        <source>Enter a AustraliaCash address (e.g. %1)</source>
-        <translation>Εισάγετε μια διεύθυνση AustraliaCash (π.χ. %1)</translation>
+        <source>Enter a tAustraliaCash address (e.g. %1)</source>
+        <translation>Εισάγετε μια διεύθυνση tAustraliaCash (π.χ. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1361,8 +1361,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to send the payment to</source>
-        <translation>Η διεύθυνση AustraliaCash που θα σταλεί η πληρωμή</translation>
+        <source>The tAustraliaCash address to send the payment to</source>
+        <translation>Η διεύθυνση tAustraliaCash που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1418,8 +1418,8 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to sign the message with</source>
-        <translation>Διεύθυνση AustraliaCash που θα σταλεί το μήνυμα</translation>
+        <source>The tAustraliaCash address to sign the message with</source>
+        <translation>Διεύθυνση tAustraliaCash που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1450,8 +1450,8 @@
         <translation>Αντέγραφη της επιλεγμενης διεύθυνσης στο πρόχειρο του συστηματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση AustraliaCash</translation>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως σας ανήκει μια συγκεκριμένη διεύθυνση tAustraliaCash</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1470,12 +1470,12 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>The AustraliaCash address the message was signed with</source>
-        <translation>Διεύθυνση AustraliaCash η οποία το μήνυμα έχει υπογραφεί</translation>
+        <source>The tAustraliaCash address the message was signed with</source>
+        <translation>Διεύθυνση tAustraliaCash η οποία το μήνυμα έχει υπογραφεί</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AustraliaCash address</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση AustraliaCash</translation>
+        <source>Verify the message to ensure it was signed with the specified tAustraliaCash address</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως υπογραφθηκε απο μια συγκεκριμένη διεύθυνση tAustraliaCash</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1683,8 +1683,8 @@
         <translation>Εκτέλεση στο παρασκήνιο κι αποδοχή εντολών</translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
-        <translation>AustraliaCash Core</translation>
+        <source>tAustraliaCash Core</source>
+        <translation>tAustraliaCash Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

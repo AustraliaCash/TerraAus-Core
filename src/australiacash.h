@@ -1,4 +1,4 @@
-// Copyright (c) 2015-2021 The AustraliaCash Core developers
+// Copyright (c) 2015-2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,8 +7,8 @@
 #include "chainparams.h"
 
 bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params);
-CAmount GetAustraliaCashBlockSubsidy(int nHeight, const Consensus::Params& consensusParams);
-unsigned int CalculateAustraliaCashNextWorkRequired(const CBlockIndex* pindexLast, int64_t nLastRetargetTime, const Consensus::Params& params);
+CAmount GettAustraliaCashBlockSubsidy(int nHeight, const Consensus::Params& consensusParams);
+unsigned int CalculatetAustraliaCashNextWorkRequired(const CBlockIndex* pindexLast, int64_t nLastRetargetTime, const Consensus::Params& params);
 
 /**
  * Check proof-of-work of a block header, taking auxpow into account.

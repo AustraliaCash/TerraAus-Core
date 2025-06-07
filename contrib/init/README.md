@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: australiacashd.service
-Upstart: australiacashd.conf
-OpenRC:  australiacashd.openrc
-         australiacashd.openrcconf
-CentOS:  australiacashd.init
-OS X:    org.australiacash.australiacashd.plist
+SystemD: taustraliacashd.service
+Upstart: taustraliacashd.conf
+OpenRC:  taustraliacashd.openrc
+         taustraliacashd.openrcconf
+CentOS:  taustraliacashd.init
+OS X:    org.taustraliacash.taustraliacashd.plist
 
 have been made available to assist packagers in creating node packages here.
 

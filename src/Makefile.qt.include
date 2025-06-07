@@ -2,8 +2,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/australiacash-qt
-EXTRA_LIBRARIES += qt/libaustraliacashqt.a
+bin_PROGRAMS += qt/taustraliacash-qt
+EXTRA_LIBRARIES += qt/libtaustraliacashqt.a
 
 # bitcoin qt core #
 QT_TS = \
@@ -249,9 +249,9 @@ RES_ICONS = \
   qt/res/icons/address-book.png \
   qt/res/icons/about.png \
   qt/res/icons/about_qt.png \
-  qt/res/icons/australiacash.ico \
-  qt/res/icons/australiacash_testnet.ico \
-  qt/res/icons/australiacash.png \
+  qt/res/icons/taustraliacash.ico \
+  qt/res/icons/taustraliacash_testnet.ico \
+  qt/res/icons/taustraliacash.png \
   qt/res/icons/chevron.png \
   qt/res/icons/clock1.png \
   qt/res/icons/clock2.png \
@@ -387,15 +387,15 @@ BITCOIN_RC = qt/res/bitcoin-qt-res.rc
 BITCOIN_QT_INCLUDES = -I$(builddir)/qt -I$(srcdir)/qt -I$(srcdir)/qt/forms \
   -I$(builddir)/qt/forms -DQT_NO_KEYWORDS
 
-qt_libaustraliacashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_libtaustraliacashqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_DBUS_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_libaustraliacashqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_libaustraliacashqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
+qt_libtaustraliacashqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_libtaustraliacashqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_libaustraliacashqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+qt_libtaustraliacashqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_FONTS)
 
-nodist_qt_libaustraliacashqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_qt_libtaustraliacashqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
 
 # forms/foo.h -> forms/ui_foo.h
@@ -404,7 +404,7 @@ QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libaustraliacashqt_a_OBJECTS) $(qt_australiacash_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libtaustraliacashqt_a_OBJECTS) $(qt_taustraliacash_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -412,36 +412,36 @@ $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
 # bitcoin-qt binary #
-qt_australiacash_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_taustraliacash_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_australiacash_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_taustraliacash_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_australiacash_qt_SOURCES = qt/bitcoin.cpp
+qt_taustraliacash_qt_SOURCES = qt/bitcoin.cpp
 if TARGET_DARWIN
-  qt_australiacash_qt_SOURCES += $(BITCOIN_MM)
+  qt_taustraliacash_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  qt_australiacash_qt_SOURCES += $(BITCOIN_RC)
+  qt_taustraliacash_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_australiacash_qt_LDADD = qt/libaustraliacashqt.a $(LIBAUSCOIN_SERVER)
+qt_taustraliacash_qt_LDADD = qt/libtaustraliacashqt.a $(LIBtAUSCOIN_SERVER)
 if ENABLE_WALLET
-qt_australiacash_qt_LDADD += $(LIBAUSCOIN_WALLET)
+qt_taustraliacash_qt_LDADD += $(LIBtAUSCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_australiacash_qt_LDADD += $(LIBAUSCOIN_ZMQ) $(ZMQ_LIBS)
+qt_taustraliacash_qt_LDADD += $(LIBtAUSCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_australiacash_qt_LDADD += $(LIBAUSCOIN_CLI) $(LIBAUSCOIN_COMMON) $(LIBAUSCOIN_UTIL) $(LIBAUSCOIN_CONSENSUS) $(LIBAUSCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
+qt_taustraliacash_qt_LDADD += $(LIBtAUSCOIN_CLI) $(LIBtAUSCOIN_COMMON) $(LIBtAUSCOIN_UTIL) $(LIBtAUSCOIN_CONSENSUS) $(LIBtAUSCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_australiacash_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_australiacash_qt_LIBTOOLFLAGS = --tag CXX
+qt_taustraliacash_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_taustraliacash_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/bitcoinstrings.cpp: $(libaustraliacash_server_a_SOURCES) $(libaustraliacash_wallet_a_SOURCES) $(libaustraliacash_common_a_SOURCES) $(libaustraliacash_zmq_a_SOURCES) $(libaustraliacash_consensus_a_SOURCES) $(libaustraliacash_util_a_SOURCES)
+$(srcdir)/qt/bitcoinstrings.cpp: $(libtaustraliacash_server_a_SOURCES) $(libtaustraliacash_wallet_a_SOURCES) $(libtaustraliacash_common_a_SOURCES) $(libtaustraliacash_zmq_a_SOURCES) $(libtaustraliacash_consensus_a_SOURCES) $(libtaustraliacash_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" COPYRIGHT_HOLDERS_SUBSTITUTION="$(COPYRIGHT_HOLDERS_SUBSTITUTION)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
@@ -467,14 +467,14 @@ $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) 
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
-CLEAN_QT = $(nodist_qt_libaustraliacashqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
+CLEAN_QT = $(nodist_qt_libtaustraliacashqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda qt/*.gcno
 
 CLEANFILES += $(CLEAN_QT)
 
-australiacash_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libaustraliacashqt_a_OBJECTS) $(qt_australiacash_qt_OBJECTS) qt/australiacash-qt$(EXEEXT) $(LIBAUSCOINQT)
+taustraliacash_qt_clean: FORCE
+	rm -f $(CLEAN_QT) $(qt_libtaustraliacashqt_a_OBJECTS) $(qt_taustraliacash_qt_OBJECTS) qt/taustraliacash-qt$(EXEEXT) $(LIBtAUSCOINQT)
 
-australiacash_qt : qt/australiacash-qt$(EXEEXT)
+taustraliacash_qt : qt/taustraliacash-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

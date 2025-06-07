@@ -99,7 +99,7 @@ tests_LDFLAGS = -static
 TESTS += tests
 endif
 
-if USE_EXHAUSTIVE_TESTS
+if USE_EXHtAUSTIVE_TESTS
 noinst_PROGRAMS += exhaustive_tests
 exhaustive_tests_SOURCES = src/tests_exhaustive.c
 exhaustive_tests_CPPFLAGS = -DSECP256K1_BUILD -DVERIFY -I$(top_srcdir)/src $(SECP_INCLUDES)

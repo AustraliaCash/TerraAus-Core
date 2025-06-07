@@ -2,17 +2,17 @@
 #
 # The relevant paths are:
 #
-#/usr/local/bin/australiacashd
-#/usr/local/etc/australiacash/
-#/var/local/australiacash/
+#/usr/local/bin/taustraliacashd
+#/usr/local/etc/taustraliacash/
+#/var/local/taustraliacash/
 
 [Unit]
-Description=AustraliaCash's distributed currency daemon
+Description=tAustraliaCash's distributed currency daemon
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/australiacashd -conf=/usr/local/etc/australiacash/australiacash.conf -datadir=/var/local/australiacash
+ExecStart=/usr/local/bin/taustraliacashd -conf=/usr/local/etc/taustraliacash/taustraliacash.conf -datadir=/var/local/taustraliacash
 
 KillSignal=SIGINT
 Restart=always
@@ -22,8 +22,8 @@ TimeoutStartSec=5
 StartLimitIntervalSec=120
 StartLimitBurst=5
 
-User=australiacash
-Group=australiacash
+User=taustraliacash
+Group=taustraliacash
 
 ### Restrict resource consumption
 MemoryAccounting=yes
@@ -40,8 +40,8 @@ TemporaryFileSystem=/:ro
 BindReadOnlyPaths=/etc/ /lib/ /lib64/
 
 # Add daemon paths
-BindReadOnlyPaths=/usr/local/bin/australiacashd /usr/local/etc/australiacash/
-BindPaths=/var/local/australiacash/
+BindReadOnlyPaths=/usr/local/bin/taustraliacashd /usr/local/etc/taustraliacash/
+BindPaths=/var/local/taustraliacash/
 
 ### Restrict access to system.
 

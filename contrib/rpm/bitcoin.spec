@@ -243,20 +243,20 @@ done
 
 %if %{_buildqt}
 # qt icons
-install -D -p share/pixmaps/australiacash.ico %{buildroot}%{_datadir}/pixmaps/australiacash.ico
+install -D -p share/pixmaps/taustraliacash.ico %{buildroot}%{_datadir}/pixmaps/taustraliacash.ico
 install -p share/pixmaps/nsis-header.bmp %{buildroot}%{_datadir}/pixmaps/
 install -p share/pixmaps/nsis-wizard.bmp %{buildroot}%{_datadir}/pixmaps/
 install -p %{SOURCE100} %{buildroot}%{_datadir}/pixmaps/bitcoin.svg
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/australiacash16.png -w16 -h16
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/australiacash32.png -w32 -h32
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/australiacash64.png -w64 -h64
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/australiacash128.png -w128 -h128
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/australiacash256.png -w256 -h256
-%{_bindir}/convert -resize 16x16 %{buildroot}%{_datadir}/pixmaps/australiacash256.png %{buildroot}%{_datadir}/pixmaps/australiacash16.xpm
-%{_bindir}/convert -resize 32x32 %{buildroot}%{_datadir}/pixmaps/australiacash256.png %{buildroot}%{_datadir}/pixmaps/australiacash32.xpm
-%{_bindir}/convert -resize 64x64 %{buildroot}%{_datadir}/pixmaps/australiacash256.png %{buildroot}%{_datadir}/pixmaps/australiacash64.xpm
-%{_bindir}/convert -resize 128x128 %{buildroot}%{_datadir}/pixmaps/australiacash256.png %{buildroot}%{_datadir}/pixmaps/australiacash128.xpm
-%{_bindir}/convert %{buildroot}%{_datadir}/pixmaps/australiacash256.png %{buildroot}%{_datadir}/pixmaps/australiacash256.xpm
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/taustraliacash16.png -w16 -h16
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/taustraliacash32.png -w32 -h32
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/taustraliacash64.png -w64 -h64
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/taustraliacash128.png -w128 -h128
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/taustraliacash256.png -w256 -h256
+%{_bindir}/convert -resize 16x16 %{buildroot}%{_datadir}/pixmaps/taustraliacash256.png %{buildroot}%{_datadir}/pixmaps/taustraliacash16.xpm
+%{_bindir}/convert -resize 32x32 %{buildroot}%{_datadir}/pixmaps/taustraliacash256.png %{buildroot}%{_datadir}/pixmaps/taustraliacash32.xpm
+%{_bindir}/convert -resize 64x64 %{buildroot}%{_datadir}/pixmaps/taustraliacash256.png %{buildroot}%{_datadir}/pixmaps/taustraliacash64.xpm
+%{_bindir}/convert -resize 128x128 %{buildroot}%{_datadir}/pixmaps/taustraliacash256.png %{buildroot}%{_datadir}/pixmaps/taustraliacash128.xpm
+%{_bindir}/convert %{buildroot}%{_datadir}/pixmaps/taustraliacash256.png %{buildroot}%{_datadir}/pixmaps/taustraliacash256.xpm
 touch %{buildroot}%{_datadir}/pixmaps/*.png -r %{SOURCE100}
 touch %{buildroot}%{_datadir}/pixmaps/*.xpm -r %{SOURCE100}
 

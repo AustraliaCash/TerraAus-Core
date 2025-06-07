@@ -99,12 +99,12 @@
         <translation>Prijímajúce adresy</translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú Vaše AustraliaCash adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
+        <source>These are your tAustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú Vaše tAustraliaCash adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše AustraliaCash adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
+        <source>These are your tAustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše tAustraliaCash adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -205,8 +205,8 @@
         <translation>Potvrďte zašifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AUSCOINS&lt;/b&gt;!</source>
-        <translation>Varovanie: Ak zašifrujete peňaženku a stratíte heslo, &lt;b&gt;STRATÍTE VŠETKY VAŠE AUSCOINY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tAUSCOINS&lt;/b&gt;!</source>
+        <translation>Varovanie: Ak zašifrujete peňaženku a stratíte heslo, &lt;b&gt;STRATÍTE VŠETKY VAŠE tAUSCOINY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -217,8 +217,8 @@
         <translation>Peňaženka zašifrovaná</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your australiacashs from being stolen by malware infecting your computer.</source>
-        <translation>%1 sa teraz zavrie, aby sa ukončil proces šifrovania. Zašifrovanie peňaženky neochráni úplne pred krádežou australiacashov škodlivými programami, ktoré prenikli do vášho počítača.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your taustraliacashs from being stolen by malware infecting your computer.</source>
+        <translation>%1 sa teraz zavrie, aby sa ukončil proces šifrovania. Zašifrovanie peňaženky neochráni úplne pred krádežou taustraliacashov škodlivými programami, ktoré prenikli do vášho počítača.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -375,8 +375,8 @@
         <translation>Preindexúvam bloky na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
-        <translation>Poslať australiacashs na adresu</translation>
+        <source>Send coins to a tAustraliaCash address</source>
+        <translation>Poslať taustraliacashs na adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -399,8 +399,8 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
-        <translation>AustraliaCash</translation>
+        <source>tAustraliaCash</source>
+        <translation>tAustraliaCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -427,12 +427,12 @@
         <translation>Zašifruj súkromné kľúče ktoré patria do vašej peňaženky</translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
-        <translation>Podpísať správu s vašou adresou AustraliaCash aby ste preukázali že ju vlastníte</translation>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
+        <translation>Podpísať správu s vašou adresou tAustraliaCash aby ste preukázali že ju vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AustraliaCash addresses</source>
-        <translation>Overiť či správa bola podpísaná uvedenou AustraliaCash adresou</translation>
+        <source>Verify messages to ensure they were signed with specified tAustraliaCash addresses</source>
+        <translation>Overiť či správa bola podpísaná uvedenou tAustraliaCash adresou</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -451,8 +451,8 @@
         <translation>Lišta záložiek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Vyžiadať platby (vygeneruje QR kódy a australiacash: URI)</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Vyžiadať platby (vygeneruje QR kódy a taustraliacash: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -463,19 +463,19 @@
         <translation>Zobraziť zoznam použitých prijímacích adries a ich popisov</translation>
     </message>
     <message>
-        <source>Open a australiacash: URI or payment request</source>
-        <translation>Otvoriť australiacash URI alebo výzvu k platbe</translation>
+        <source>Open a taustraliacash: URI or payment request</source>
+        <translation>Otvoriť taustraliacash URI alebo výzvu k platbe</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Možnosti príkazového riadku</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to AustraliaCash network</source>
+        <source>%n active connection(s) to tAustraliaCash network</source>
         <translation>
-            <numerusform>%n aktívne pripojenie do siete AustraliaCash</numerusform>
-            <numerusform>%n aktívne pripojenia do siete AustraliaCash</numerusform>
-            <numerusform>%n aktívnych pripojení do siete AustraliaCash</numerusform>
+            <numerusform>%n aktívne pripojenie do siete tAustraliaCash</numerusform>
+            <numerusform>%n aktívne pripojenia do siete tAustraliaCash</numerusform>
+            <numerusform>%n aktívnych pripojení do siete tAustraliaCash</numerusform>
         </translation>
     </message>
     <message>
@@ -523,8 +523,8 @@
         <translation>Aktualizovaný</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible AustraliaCash command-line options</source>
-        <translation>Ukáž %1 zoznam možných nastavení AustraliaCashu pomocou príkazového riadku</translation>
+        <source>Show the %1 help message to get a list with possible tAustraliaCash command-line options</source>
+        <translation>Ukáž %1 zoznam možných nastavení tAustraliaCashu pomocou príkazového riadku</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -585,8 +585,8 @@
         <translation>Peňaženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálne &lt;b&gt;zamknutá&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. AustraliaCash can no longer continue safely and will quit.</source>
-        <translation>Vyskytla sa kritická chyba. AustraliaCash nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
+        <source>A fatal error occurred. tAustraliaCash can no longer continue safely and will quit.</source>
+        <translation>Vyskytla sa kritická chyba. tAustraliaCash nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
     </message>
     <message>
         <source>&amp;Print paper wallets</source>
@@ -609,7 +609,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import a AustraliaCash private key</source>
+        <source>Import a tAustraliaCash private key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -819,8 +819,8 @@
         <translation>Upraviť odosielaciu adresu</translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid AustraliaCash address.</source>
-        <translation>Vložená adresa &quot;%1&quot; nieje platnou adresou AustraliaCash.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid tAustraliaCash address.</source>
+        <translation>Vložená adresa &quot;%1&quot; nieje platnou adresou tAustraliaCash.</translation>
     </message>
     <message>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
@@ -991,8 +991,8 @@
         <translation>Keďže toto je prvé spustenie programu, môžete si vybrať, kam %1 bude ukladať vaše údaje.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the AustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 stiahne a uloží kópiu AustraliaCash block chain. Minimálne %2GB dát bude uložených v tejto zložke, a bude sa zväčšovať postupom času. Peňaženka bude taktiež uložená v tejto zložke.</translation>
+        <source>%1 will download and store a copy of the tAustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 stiahne a uloží kópiu tAustraliaCash block chain. Minimálne %2GB dát bude uložených v tejto zložke, a bude sa zväčšovať postupom času. Peňaženka bude taktiež uložená v tejto zložke.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1038,12 +1038,12 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the australiacash network, as detailed below.</source>
-        <translation>Nedávne transakcie nemusia byť ešte viditeľné preto môže byť zostatok vo vašej peňaženke nesprávny. Táto informácia bude správna keď sa dokončí synchronizovanie peňaženky so sieťou australiacash, ako je rozpísané nižšie.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the taustraliacash network, as detailed below.</source>
+        <translation>Nedávne transakcie nemusia byť ešte viditeľné preto môže byť zostatok vo vašej peňaženke nesprávny. Táto informácia bude správna keď sa dokončí synchronizovanie peňaženky so sieťou taustraliacash, ako je rozpísané nižšie.</translation>
     </message>
     <message>
-        <source>Attempting to spend australiacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Pokus o minutie australiacashov, ktoré sú ovplyvnené ešte nezobrazenými transakciami, nebude sieťou akceptovaný.</translation>
+        <source>Attempting to spend taustraliacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Pokus o minutie taustraliacashov, ktoré sú ovplyvnené ešte nezobrazenými transakciami, nebude sieťou akceptovaný.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1200,16 +1200,16 @@
         <translation>Minúť nepotvrdený výdavok</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvorit port pre AustraliaCash na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvorit port pre tAustraliaCash na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapovať port pomocou &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a SOCKS5 proxy.</source>
-        <translation>Pripojiť do siete AustraliaCash cez proxy server SOCKS5.</translation>
+        <source>Connect to the tAustraliaCash network through a SOCKS5 proxy.</source>
+        <translation>Pripojiť do siete tAustraliaCash cez proxy server SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1248,8 +1248,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Pripojiť k AustraliaCashovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
+        <source>Connect to the tAustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Pripojiť k tAustraliaCashovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1297,7 +1297,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvoľte ako deliť australiacash pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
+        <translation>Zvoľte ako deliť taustraliacash pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1363,8 +1363,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AustraliaCash network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou AustraliaCash po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tAustraliaCash network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou tAustraliaCash po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1471,11 +1471,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To see ongoing development and contribute, check out the AustraliaCash Core repository on GitHub</source>
+        <source>To see ongoing development and contribute, check out the tAustraliaCash Core repository on GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Services that claim to double your australiacashs are always ponzi schemes</source>
+        <source>Services that claim to double your taustraliacashs are always ponzi schemes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1590,7 +1590,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of AUS you wish to send to each wallet:</source>
+        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of tAUS you wish to send to each wallet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1673,8 +1673,8 @@ p, li { white-space: pre-wrap; }
         <translation>Neplatná adresa platby %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AustraliaCash address or malformed URI parameters.</source>
-        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou AustraliaCash adresou alebo zle nastavenými vlastnosťami URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid tAustraliaCash address or malformed URI parameters.</source>
+        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou tAustraliaCash adresou alebo zle nastavenými vlastnosťami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1741,7 +1741,7 @@ p, li { white-space: pre-wrap; }
         <translation>Platba potvrdená</translation>
     </message>
     <message>
-        <source>Cannot start australiacash: click-to-pay handler</source>
+        <source>Cannot start taustraliacash: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1814,8 +1814,8 @@ p, li { white-space: pre-wrap; }
         <translation>Suma</translation>
     </message>
     <message>
-        <source>Enter a AustraliaCash address (e.g. %1)</source>
-        <translation>Zadajte australiacash adresu (napr. %1)</translation>
+        <source>Enter a tAustraliaCash address (e.g. %1)</source>
+        <translation>Zadajte taustraliacash adresu (napr. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2307,8 +2307,8 @@ p, li { white-space: pre-wrap; }
         <translation>Znovu použiť jestvujúcu prijímaciu adresu (neodporúča sa)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AustraliaCash network.</source>
-        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť AustraliaCash.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the tAustraliaCash network.</source>
+        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť tAustraliaCash.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2461,7 +2461,7 @@ p, li { white-space: pre-wrap; }
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať AustraliaCashs</translation>
+        <translation>Poslať tAustraliaCashs</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2540,7 +2540,7 @@ p, li { white-space: pre-wrap; }
         <translation>spolu aspoň</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for australiacash transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for taustraliacash transactions than the network can process.</source>
         <translation>Zaplatenie len minimálneho poplatku je v poriadku, pokiaľ existuje menej transakcií ako miesta v blokoch. Uvedomte si však, že ak bude vyšší dopyt po transakciách ako dokáže sieť spracovať, môže byť vaša transakcia odsúvaná a nepotvrdená donekonečna.</translation>
     </message>
     <message>
@@ -2712,8 +2712,8 @@ p, li { white-space: pre-wrap; }
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid AustraliaCash address</source>
-        <translation>Varovanie: Neplatná AustraliaCash adresa</translation>
+        <source>Warning: Invalid tAustraliaCash address</source>
+        <translation>Varovanie: Neplatná tAustraliaCash adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2779,7 +2779,7 @@ p, li { white-space: pre-wrap; }
         <translation>Toto je normálna platba.</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to send the payment to</source>
+        <source>The tAustraliaCash address to send the payment to</source>
         <translation>Zvoľte adresu kam poslať platbu</translation>
     </message>
     <message>
@@ -2799,8 +2799,8 @@ p, li { white-space: pre-wrap; }
         <translation>Odstrániť túto položku</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less australiacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej australiacashov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less taustraliacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej taustraliacashov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2823,8 +2823,8 @@ p, li { white-space: pre-wrap; }
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the australiacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AustraliaCash network.</source>
-        <translation>Správa ktorá bola pripojená k australiacash: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť AustraliaCash.</translation>
+        <source>A message that was attached to the taustraliacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the tAustraliaCash network.</source>
+        <translation>Správa ktorá bola pripojená k taustraliacash: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť tAustraliaCash.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2868,12 +2868,12 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Podpísať Správu</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive australiacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive taustraliacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Môžete podpísať správy svojou adresou a dokázať, že viete prijímať mince zaslané na túto adresu. Buďte však opatrní a podpíšte len podrobné prehlásenia, s ktorými plne súhlasíte, nakoľko útoky typu &quot;phishing&quot; Vás môžu lákať k podpísaniu nejasných alebo príliš všeobecných tvrdení čím prevezmú vašu identitu.</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to sign the message with</source>
-        <translation>AustraliaCash adresa pre podpísanie správy s</translation>
+        <source>The tAustraliaCash address to sign the message with</source>
+        <translation>tAustraliaCash adresa pre podpísanie správy s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2904,7 +2904,7 @@ p, li { white-space: pre-wrap; }
         <translation>Kopírovať tento podpis do systémovej schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
         <translation>Podpíšte správu aby ste dokázali že vlastníte túto adresu</translation>
     </message>
     <message>
@@ -2928,12 +2928,12 @@ p, li { white-space: pre-wrap; }
         <translation>Vložte adresu príjemcu, správu (uistite sa, že presne kopírujete ukončenia riadkov, medzery, odrážky, atď.) a podpis pre potvrdenie správy. Buďte opatrní a nedomýšľajte si viac než je uvedené v samotnej podpísanej správe a môžete sa tak vyhnúť podvodu MITM útokom. Toto len potvrdzuje, že podpisujúca strana môže prijímať na tejto adrese, nepotvrdzuje to vlastníctvo žiadnej transakcie!</translation>
     </message>
     <message>
-        <source>The AustraliaCash address the message was signed with</source>
-        <translation>Adresa AustraliaCash, ktorou bola podpísaná správa</translation>
+        <source>The tAustraliaCash address the message was signed with</source>
+        <translation>Adresa tAustraliaCash, ktorou bola podpísaná správa</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AustraliaCash address</source>
-        <translation>Overím správy sa uistiť že bola podpísaná označenou AustraliaCash adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified tAustraliaCash address</source>
+        <translation>Overím správy sa uistiť že bola podpísaná označenou tAustraliaCash adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3620,8 +3620,8 @@ p, li { white-space: pre-wrap; }
         <translation>Nepodarilo sa spustiť HTTP server. Pre viac detailov zobrazte debug log.</translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
-        <translation>AustraliaCash Core</translation>
+        <source>tAustraliaCash Core</source>
+        <translation>tAustraliaCash Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -4308,7 +4308,7 @@ p, li { white-space: pre-wrap; }
         <translation>Chyba</translation>
     </message>
     <message>
-        <source>Bitcoin Core and AustraliaCash Core</source>
+        <source>Bitcoin Core and tAustraliaCash Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

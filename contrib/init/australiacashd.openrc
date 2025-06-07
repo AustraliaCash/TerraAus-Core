@@ -2,26 +2,26 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/australiacash/.australiacash" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/australiacash/.australiacash"
+if [ -d "/var/lib/taustraliacash/.taustraliacash" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/taustraliacash/.taustraliacash"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/australiacashd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/taustraliacashd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/australiacash/australiacash.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/australiacashd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/australiacashd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/taustraliacash/taustraliacash.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/taustraliacashd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/taustraliacashd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-australiacash}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-australiacash}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/australiacashd}
+BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-taustraliacash}}
+BITCOIND_GROUP=${BITCOIND_GROUP:-taustraliacash}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/taustraliacashd}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
 name="Bitcoin Core Daemon"
 description="Bitcoin cryptocurrency P2P network daemon"
 
-command="/usr/bin/australiacashd"
+command="/usr/bin/taustraliacashd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -71,7 +71,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run australiacashd."
+		eerror "ERROR: You must set a secure rpcpassword to run taustraliacashd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "

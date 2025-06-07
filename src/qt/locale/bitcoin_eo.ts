@@ -99,11 +99,11 @@
         <translation type="vanished">Ricevaj adresoj</translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your tAustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Jen viaj Ausmon-adresoj por sendi pagojn. Zorge kontrolu la sumon kaj la alsendan adreson antaŭ ol sendi.</translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your tAustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Jen viaj ausmonaj adresoj por ricevi pagojn. Estas konsilinde uzi apartan ricevan adreson por ĉiu transakcio.</translation>
     </message>
     <message>
@@ -209,7 +209,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AUSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tAUSCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your australiacashs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your taustraliacashs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -351,7 +351,7 @@
         <translation>Reindeksado de blokoj sur disko...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
+        <source>Send coins to a tAustraliaCash address</source>
         <translation>Sendi monon al Ausmon-adreso</translation>
     </message>
     <message>
@@ -375,7 +375,7 @@
         <translation>&amp;Kontroli mesaĝon...</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
+        <source>tAustraliaCash</source>
         <translation>Ausmono</translation>
     </message>
     <message>
@@ -403,11 +403,11 @@
         <translation>Ĉifri la privatajn ŝlosilojn de via monujo</translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
         <translation>Subskribi mesaĝojn per via Ausmon-adresoj por pravigi, ke vi estas la posedanto</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AustraliaCash addresses</source>
+        <source>Verify messages to ensure they were signed with specified tAustraliaCash addresses</source>
         <translation>Kontroli mesaĝojn por kontroli ĉu ili estas subskribitaj per specifaj Ausmon-adresoj</translation>
     </message>
     <message>
@@ -427,8 +427,8 @@
         <translation>Langeto-breto</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso australiacash:)</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Peti pagon (kreas QR-kodojn kaj URI-ojn kun prefikso taustraliacash:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -439,8 +439,8 @@
         <translation>Vidigi la liston de uzitaj ricevaj adresoj kaj etikedoj</translation>
     </message>
     <message>
-        <source>Open a australiacash: URI or payment request</source>
-        <translation>Malfermi australiacash:-URI-on aŭ pagpeton</translation>
+        <source>Open a taustraliacash: URI or payment request</source>
+        <translation>Malfermi taustraliacash:-URI-on aŭ pagpeton</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -557,11 +557,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import a AustraliaCash private key</source>
+        <source>Import a tAustraliaCash private key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible AustraliaCash command-line options</source>
+        <source>Show the %1 help message to get a list with possible tAustraliaCash command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -569,7 +569,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to AustraliaCash network</source>
+        <source>%n active connection(s) to tAustraliaCash network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -623,7 +623,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. AustraliaCash can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. tAustraliaCash can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -817,7 +817,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid AustraliaCash address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid tAustraliaCash address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1008,7 +1008,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the AustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the tAustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1038,11 +1038,11 @@
         <translation>Horo de la lasta bloko</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the australiacash network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the taustraliacash network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attempting to spend australiacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend taustraliacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1148,7 +1148,7 @@
         <translation>Fakulo</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Aŭtomate malfermi la kursilan pordon por Ausmono. Tio funkcias nur se via kursilo havas la UPnP-funkcion, kaj se tiu ĉi estas ŝaltita.</translation>
     </message>
     <message>
@@ -1280,7 +1280,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a SOCKS5 proxy.</source>
+        <source>Connect to the tAustraliaCash network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1304,7 +1304,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the tAustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1359,7 +1359,7 @@
         <translation>Formularo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AustraliaCash network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tAustraliaCash network after a connection is established, but this process has not completed yet.</source>
         <translation>Eblas, ke la informoj videblaj ĉi tie estas eksdataj. Via monujo aŭtomate sinkoniĝas kun la bitmona reto kiam ili konektiĝas, sed tiu procezo ankoraŭ ne finfariĝis.</translation>
     </message>
     <message>
@@ -1467,11 +1467,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To see ongoing development and contribute, check out the AustraliaCash Core repository on GitHub</source>
+        <source>To see ongoing development and contribute, check out the tAustraliaCash Core repository on GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Services that claim to double your australiacashs are always ponzi schemes</source>
+        <source>Services that claim to double your taustraliacashs are always ponzi schemes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1586,7 +1586,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of AUS you wish to send to each wallet:</source>
+        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of tAUS you wish to send to each wallet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1657,7 +1657,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot start australiacash: click-to-pay handler</source>
+        <source>Cannot start taustraliacash: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1673,7 +1673,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AustraliaCash address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid tAustraliaCash address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1826,7 +1826,7 @@ p, li { white-space: pre-wrap; }
         <translation>%1 kaj %2</translation>
     </message>
     <message>
-        <source>Enter a AustraliaCash address (e.g. %1)</source>
+        <source>Enter a tAustraliaCash address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2312,7 +2312,7 @@ p, li { white-space: pre-wrap; }
         <translation>Forigi</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AustraliaCash network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the tAustraliaCash network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2569,7 +2569,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for australiacash transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for taustraliacash transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2689,7 +2689,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: Invalid AustraliaCash address</source>
+        <source>Warning: Invalid tAustraliaCash address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2760,11 +2760,11 @@ p, li { white-space: pre-wrap; }
         <translation>Memorando:</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to send the payment to</source>
+        <source>The tAustraliaCash address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less australiacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less taustraliacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2772,7 +2772,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A message that was attached to the australiacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AustraliaCash network.</source>
+        <source>A message that was attached to the taustraliacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the tAustraliaCash network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2845,7 +2845,7 @@ p, li { white-space: pre-wrap; }
         <translation>Kopii la aktualan subskribon al la tondejo</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
         <translation>Subskribi la mesaĝon por pravigi, ke vi estas la posedanto de tiu Ausmon-adreso</translation>
     </message>
     <message>
@@ -2865,7 +2865,7 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Kontroli Mesaĝon</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AustraliaCash address</source>
+        <source>Verify the message to ensure it was signed with the specified tAustraliaCash address</source>
         <translation>Kontroli la mesaĝon por pravigi, ke ĝi ja estas subskribita per la specifa Ausmon-adreso</translation>
     </message>
     <message>
@@ -2877,11 +2877,11 @@ p, li { white-space: pre-wrap; }
         <translation>Reagordigi ĉiujn prikontrolajn kampojn</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive australiacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive taustraliacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The AustraliaCash address to sign the message with</source>
+        <source>The tAustraliaCash address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2889,7 +2889,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The AustraliaCash address the message was signed with</source>
+        <source>The tAustraliaCash address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3526,7 +3526,7 @@ p, li { white-space: pre-wrap; }
         <translation>Ruli fone kiel demono kaj akcepti komandojn</translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
+        <source>tAustraliaCash Core</source>
         <translation>Kerno de Ausmono</translation>
     </message>
     <message>
@@ -3714,7 +3714,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bitcoin Core and AustraliaCash Core</source>
+        <source>Bitcoin Core and tAustraliaCash Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

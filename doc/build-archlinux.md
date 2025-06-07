@@ -5,12 +5,12 @@ Arch Linux build guide
 **Test date:** 2022/07/15
 
 This example lists the steps necessary to setup and build a command line only
-australiacashd on archlinux:
+taustraliacashd on archlinux:
 
 ```sh
 pacman -S git base-devel boost libevent python db
-git clone https://github.com/australiacash/australiacash.git
-cd australiacash/
+git clone https://github.com/taustraliacash/taustraliacash.git
+cd taustraliacash/
 ./autogen.sh
 ./configure --without-gui --without-miniupnpc
 make

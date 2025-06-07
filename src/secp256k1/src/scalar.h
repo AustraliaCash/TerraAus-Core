@@ -13,7 +13,7 @@
 #include "libsecp256k1-config.h"
 #endif
 
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
 #include "scalar_low.h"
 #elif defined(USE_SCALAR_4X64)
 #include "scalar_4x64.h"

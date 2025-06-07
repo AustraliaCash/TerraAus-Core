@@ -1,6 +1,6 @@
-usr/local/bin/australiacash-qt usr/bin
-share/pixmaps/australiacash32.xpm usr/share/pixmaps
-share/pixmaps/australiacash16.xpm usr/share/pixmaps
-share/pixmaps/australiacash128.png usr/share/pixmaps
-debian/australiacash-qt.desktop usr/share/applications
-debian/australiacash-qt.protocol usr/share/kde4/services/
+usr/local/bin/taustraliacash-qt usr/bin
+share/pixmaps/taustraliacash32.xpm usr/share/pixmaps
+share/pixmaps/taustraliacash16.xpm usr/share/pixmaps
+share/pixmaps/taustraliacash128.png usr/share/pixmaps
+debian/taustraliacash-qt.desktop usr/share/applications
+debian/taustraliacash-qt.protocol usr/share/kde4/services/

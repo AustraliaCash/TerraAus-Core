@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2018-2024 The AustraliaCash Core developers
+// Copyright (c) 2018-2024 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -166,12 +166,12 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x273a20070d7cb57e4c77354d8bd5e01c1cf7d96ad32d91a7b7d183e30da12ef5"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed.australiacash.org", true));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed2.australiacash.org"));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed3.australiacash.org"));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed4.australiacash.org"));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed5.australiacash.org"));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed6.australiacash.org"));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed.taustraliacash.org", true));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed2.taustraliacash.org"));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed3.taustraliacash.org"));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed4.taustraliacash.org"));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed5.taustraliacash.org"));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed6.taustraliacash.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -331,8 +331,8 @@ public:
 
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "seed.australiacash.org", true));
-        vSeeds.push_back(CDNSSeedData("australiacash.org", "testseed.australiacash.org", true));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "seed.taustraliacash.org", true));
+        vSeeds.push_back(CDNSSeedData("taustraliacash.org", "testseed.taustraliacash.org", true));
         vSeeds.push_back(CDNSSeedData("triplezen.org", "testseed.triplezen.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113); // 0x71

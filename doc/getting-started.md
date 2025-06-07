@@ -1,16 +1,16 @@
 ## Getting started
 
-This tutorial will help you to go through the basics to use AustraliaCash Core after you completed the [installation instructions](/INSTALL.md). You now have `australiacashd` or `australiacash-qt` executables available to run a node, and `australiacash-cli`/`australiacash-tx` tools to help you transact AUS.
+This tutorial will help you to go through the basics to use tAustraliaCash Core after you completed the [installation instructions](/INSTALL.md). You now have `taustraliacashd` or `taustraliacash-qt` executables available to run a node, and `taustraliacash-cli`/`taustraliacash-tx` tools to help you transact tAUS.
 
 > **Note:** For simplicity, this guide assumes that executables can be found under the `PATH` environment variable.
 If needed, you can specify their location by typing `PATH=$PATH:/path/to/executables`, or prepend the full path to the command like:
 > ```console
-> shibetoshi:~$ /path/to/australiacash-cli [arguments ...]
+> shibetoshi:~$ /path/to/taustraliacash-cli [arguments ...]
 > ```
 
 ### Table of contents
 
-1. [Starting a australiacash node](#starting-a-australiacash-node)
+1. [Starting a taustraliacash node](#starting-a-taustraliacash-node)
 2. [Introduction to the JSON-RPC API](#introduction-to-the-json-rpc-api)
     * [Creating a wallet](#creating-a-wallet)
     * [Verifying your balance](#verifying-your-balance)
@@ -24,53 +24,53 @@ If needed, you can specify their location by typing `PATH=$PATH:/path/to/executa
     * [Memory](#memory)
     * [Troubleshooting](#troubleshooting)
 
-## Starting a AustraliaCash node
+## Starting a tAustraliaCash node
 
-To start your node, you can run an headless server using `australiacashd`:
+To start your node, you can run an headless server using `taustraliacashd`:
 ```console
-shibetoshi:~$ australiacashd -daemon
+shibetoshi:~$ taustraliacashd -daemon
 ```
 
-Or you can use the Graphical User Interface (GUI), `australiacash-qt`:
+Or you can use the Graphical User Interface (GUI), `taustraliacash-qt`:
 ```console
-shibetoshi:~$ australiacash-qt
+shibetoshi:~$ taustraliacash-qt
 ```
 
 Detailed logging is recorded in `debug.log`, located in the [data directory](#data-directory).
 *Use `-help` to see all available options for each executable.*
 
-Your node is now running and starts with a *synchronization process* that downloads the entire blockchain from other nodes. This operation will take many hours to complete, but you are now part of the AustraliaCash network!
+Your node is now running and starts with a *synchronization process* that downloads the entire blockchain from other nodes. This operation will take many hours to complete, but you are now part of the tAustraliaCash network!
 
-> **Note:** The rest of this guide assumes the use of an headless node. The RPC server is not exposed with `australiacash-qt` until you activate the `-server` option as a startup argument, but inside the GUI application, you can use all the commands explored below (without `australiacash-cli`) by going to `Help -> Debug window` and inside the popup window selecting the tab `Console`.
+> **Note:** The rest of this guide assumes the use of an headless node. The RPC server is not exposed with `taustraliacash-qt` until you activate the `-server` option as a startup argument, but inside the GUI application, you can use all the commands explored below (without `taustraliacash-cli`) by going to `Help -> Debug window` and inside the popup window selecting the tab `Console`.
 
 ## Introduction to the JSON-RPC API
 
-AustraliaCash Core exposes a JSON-RPC interface that allows you to request information about the network, blockchain and individual transactions, send transactions to the networks and manage your wallet.
+tAustraliaCash Core exposes a JSON-RPC interface that allows you to request information about the network, blockchain and individual transactions, send transactions to the networks and manage your wallet.
 
-The AustraliaCash Core installation provides the `australiacash-cli` tool to interact with the JSON-RPC from the command line, and the interface is exposed over HTTP on port `22555`, so that other tools and libraries can interact with it.
+The tAustraliaCash Core installation provides the `taustraliacash-cli` tool to interact with the JSON-RPC from the command line, and the interface is exposed over HTTP on port `22555`, so that other tools and libraries can interact with it.
 
 To have an overview of the available commands, use the `help` command:
 
 ```console
 #List all commands
-shibetoshi:~$ australiacash-cli help
+shibetoshi:~$ taustraliacash-cli help
 
 #Get help for a specific command
-shibetoshi:~$ australiacash-cli help COMMAND
+shibetoshi:~$ taustraliacash-cli help COMMAND
 ```
 
 Some commands are different, but it's possible to use the [bitcoin RPC API documentation](https://developer.bitcoin.org/reference/rpc/).
 
 ### Creating a wallet
 
-To receive AUS, you need an address that is securely derived from a private key through a series of automatic, cryptographic operations. The *address* can be shared with anyone to receive AUS, but the *private key* is  sensitive information that allows anyone that knows it to spend the AUS on the associated address.
+To receive tAUS, you need an address that is securely derived from a private key through a series of automatic, cryptographic operations. The *address* can be shared with anyone to receive tAUS, but the *private key* is  sensitive information that allows anyone that knows it to spend the tAUS on the associated address.
 
-By default, the AustraliaCash Core software will automatically create an address for you and securely store the private key in the wallet file.
+By default, the tAustraliaCash Core software will automatically create an address for you and securely store the private key in the wallet file.
 
 You can list wallet addresses using `getaddressesbyaccount`:
 
 ```console
-shibetoshi:~$ australiacash-cli getaddressesbyaccount ""
+shibetoshi:~$ taustraliacash-cli getaddressesbyaccount ""
 [
   "DA2fBazU8Y4epNJ2fQRZCcWpxKZY9HrhLN"
 ]
@@ -78,19 +78,19 @@ shibetoshi:~$ australiacash-cli getaddressesbyaccount ""
 
 Using `getnewaddress` will generate a new wallet address:
 ```console
-shibetoshi:~$ australiacash-cli getnewaddress
+shibetoshi:~$ taustraliacash-cli getnewaddress
 DNnGtXk9khadE7EKCmQzxjnehenX92PKAv
 ```
 
 Private keys are stored in the `wallet.dat` file. You can use `backupwallet` to save a copy:
 
 ```console
-shibetoshi:~$ australiacash-cli backupwallet /path/of/wallet/backup
+shibetoshi:~$ taustraliacash-cli backupwallet /path/of/wallet/backup
 ```
 
-**Tip:** AustraliaCash addresses start with the letter `D`.
+**Tip:** tAustraliaCash addresses start with the letter `D`.
 
-You now have two wallet addresses to share with other people to receive AUS! Consider avoiding [address reuse](https://en.bitcoin.it/wiki/Address_reuse) for anonymity and security reasons.
+You now have two wallet addresses to share with other people to receive tAUS! Consider avoiding [address reuse](https://en.bitcoin.it/wiki/Address_reuse) for anonymity and security reasons.
 
 ### Verifying your balance
 
@@ -98,30 +98,30 @@ The total balance of all addresses held in your wallet can be found with the `ge
 
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli getbalance "*" minconf
+shibetoshi:~$ taustraliacash-cli getbalance "*" minconf
 ```
 
 `minconf` stands for minimum confirmations.
 For example, to see current balance with transaction having at least 5 confirmations:
 
 ```console
-shibetoshi:~$ australiacash-cli getbalance "*" 5
+shibetoshi:~$ taustraliacash-cli getbalance "*" 5
 421.552000
 ```
 
 ### Sending transactions
 
-AustraliaCash implements the [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) model to track which amounts of coin belong to an address. Owning AUS means that you know the private key(s) to addresses that are associated with unspent outputs. To spend them, you have to compose a new transaction that spends the value from currently unspent outputs to new outputs.
+tAustraliaCash implements the [Unspent Transaction Output (UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output) model to track which amounts of coin belong to an address. Owning tAUS means that you know the private key(s) to addresses that are associated with unspent outputs. To spend them, you have to compose a new transaction that spends the value from currently unspent outputs to new outputs.
 
 ##### sendtoaddress
 
 It's possible to use a single command to create, sign and send a transaction :
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli sendtoaddress address amount
+shibetoshi:~$ taustraliacash-cli sendtoaddress address amount
 
 #Example
-shibetoshi:~$ australiacash-cli sendtoaddress nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh 420
+shibetoshi:~$ taustraliacash-cli sendtoaddress nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh 420
 ```
 
 So much spending power !
@@ -134,10 +134,10 @@ This displays a list of UTXOs associated to addresses kept in the wallet.
 
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli listunspent minconf maxconf '["address", ...]'
+shibetoshi:~$ taustraliacash-cli listunspent minconf maxconf '["address", ...]'
 
 #Example
-shibetoshi:~$ australiacash-cli listunspent 1 9999999 '["nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P"]'
+shibetoshi:~$ taustraliacash-cli listunspent 1 9999999 '["nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P"]'
 [
   {
     "txid": "b869ed6606d52e6446dc12db02cf868ab693dd5b9f661116269536f0f8fa2433",
@@ -171,7 +171,7 @@ shibetoshi:~$ utxos_to_use='
     },
     ...
   ]'
-shibetoshi:~$ australiacash-cli createrawtransaction "$utxos_to_use" '{"address":amount, ...}'
+shibetoshi:~$ taustraliacash-cli createrawtransaction "$utxos_to_use" '{"address":amount, ...}'
 
 #Example
 shibetoshi:~$ utxos_to_use='
@@ -181,24 +181,24 @@ shibetoshi:~$ utxos_to_use='
     "vout": 0
   }
 ]'
-shibetoshi:~$ australiacash-cli createrawtransaction "$utxos_to_use" '{"nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh":69, "nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P": 30.999}'
+shibetoshi:~$ taustraliacash-cli createrawtransaction "$utxos_to_use" '{"nWSYUqtimF7B6qW4GBdczaG6jvqKutS1Nh":69, "nnJDY1xCRgWQc7vBXHUPMPsEynuZW23Y3P": 30.999}'
 01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b80000000000ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000
 ```
 
 You can combine multiple UTXO and send it to multiple recipients by extending the `utxos_to_use` and recipient JSON structures.
 
-> **Tip:** The transaction returned is encoded in hexadecimal encoding. You can use `australiacash-cli decoderawtransaction` or `australiacash-tx -json` to convert the content to JSON format.
+> **Tip:** The transaction returned is encoded in hexadecimal encoding. You can use `taustraliacash-cli decoderawtransaction` or `taustraliacash-tx -json` to convert the content to JSON format.
 
 ##### signrawtransaction
 
-Before sending a transaction, it must be signed by the private key that the address was derived from. AustraliaCash Core will automatically use the correct private key when spending UTXO known to the wallet.
+Before sending a transaction, it must be signed by the private key that the address was derived from. tAustraliaCash Core will automatically use the correct private key when spending UTXO known to the wallet.
 
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli signrawtransaction encoded_transaction
+shibetoshi:~$ taustraliacash-cli signrawtransaction encoded_transaction
 
 #Example
-shibetoshi:~$ australiacash-cli signrawtransaction "01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b80000000000ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000"
+shibetoshi:~$ taustraliacash-cli signrawtransaction "01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b80000000000ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000"
 {
   "hex": "01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b8000000006a47304402200e1bf722d4335179de170f7c762755b463b3f7b8f026f30950f701bc834f0e6e022036295fdd5e607ca41c4e0e62e59d0911b607bfabedde2424665ffae13564d0e001210388f8f226d12eccd3ba93c1454ec4498b065cea96e29b918fbdb517872ebbf581ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000",
   "complete": true
@@ -211,10 +211,10 @@ Finally, broadcast the transaction to the network so that it can be included in 
 
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli sendrawtransaction signed_transaction
+shibetoshi:~$ taustraliacash-cli sendrawtransaction signed_transaction
 
 #Example
-shibetoshi:~$ australiacash-cli sendrawtransaction 01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b8000000006a47304402200e1bf722d4335179de170f7c762755b463b3f7b8f026f30950f701bc834f0e6e022036295fdd5e607ca41c4e0e62e59d0911b607bfabedde2424665ffae13564d0e001210388f8f226d12eccd3ba93c1454ec4498b065cea96e29b918fbdb517872ebbf581ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000
+shibetoshi:~$ taustraliacash-cli sendrawtransaction 01000000013324faf8f03695261611669f5bdd93b68a86cf02db12dc46642ed50666ed69b8000000006a47304402200e1bf722d4335179de170f7c762755b463b3f7b8f026f30950f701bc834f0e6e022036295fdd5e607ca41c4e0e62e59d0911b607bfabedde2424665ffae13564d0e001210388f8f226d12eccd3ba93c1454ec4498b065cea96e29b918fbdb517872ebbf581ffffffff0200a5459b010000001976a91418a89ee36293f15c4db4c01173babd579243161188ac60b8c4b8000000001976a914c6977da37560e1432c2e14e16952981a4c272cac88ac00000000
 b4fae2a43cb35f8016a547e9658e061f1da4a043efafecc42f739d46d95dee21
 ```
 
@@ -223,17 +223,17 @@ b4fae2a43cb35f8016a547e9658e061f1da4a043efafecc42f739d46d95dee21
 Blocks and transactions are identified by unique *hashes*.
 Let's find the *[coinbase transaction](https://www.javatpoint.com/coinbase-transaction)* of block 69.
 
-> **Note:** To be able to query transactions not related to your own wallet, like in this example, you will need to enable the `-txindex` option. This options requires the AustraliaCash Core software to re-index the entire blockchain, and can take up to several hours.
+> **Note:** To be able to query transactions not related to your own wallet, like in this example, you will need to enable the `-txindex` option. This options requires the tAustraliaCash Core software to re-index the entire blockchain, and can take up to several hours.
 
 First, request the information about block 69:
 
 ```console
 #Find block hash from his height
-shibetoshi:~$ australiacash-cli getblockhash 69
+shibetoshi:~$ taustraliacash-cli getblockhash 69
 3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b
 
 #Get block data
-shibetoshi:~$ australiacash-cli getblock 3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b
+shibetoshi:~$ taustraliacash-cli getblock 3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b
 {
   "hash": "3d2def20cd0d3aca148741ef469bda11647a3040d7669c82745d03c728706a8b",
   "confirmations": 7816,
@@ -264,10 +264,10 @@ We can see the entire transaction by querying for its identifier:
 
 ```console
 #Syntax
-shibetoshi:~$ australiacash-cli getrawtransaction txid verbose
+shibetoshi:~$ taustraliacash-cli getrawtransaction txid verbose
 
 #Example
-shibetoshi:~$ australiacash-cli getrawtransaction 695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db 1
+shibetoshi:~$ taustraliacash-cli getrawtransaction 695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db 1
 {
   "hex": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0e04d9eea3520101062f503253482fffffffff0100ac6156be23000023210340a42a5ad6c4c0cd5ae539657032e0a359bd3e0f95771f34d71691b13460a624ac00000000",
   "txid": "695ce4208fa7a87ef9e99805b0910dc129058ecdceb5cef7e25f71dcdc7936db",
@@ -310,16 +310,16 @@ The `vout` structure will give you information about where the transaction outpu
 
 There are many parameters that can be configured to tune your node to your liking. There are two ways to change the configuration.
 
-Using `australiacashd -help` will display all available configuration parameters that can be added as arguments:
+Using `taustraliacashd -help` will display all available configuration parameters that can be added as arguments:
 
 **Command example :**
 ```console
-shibetoshi:~$ australiacashd -daemon -paytxfee=0.01 -sendfreetransactions=1 -maxconnections=150
+shibetoshi:~$ taustraliacashd -daemon -paytxfee=0.01 -sendfreetransactions=1 -maxconnections=150
 ```
 
-Configuration can be persisted by creating a `australiacash.conf` file. Create it in the directory defined with the `datadir` setting, `$HOME/.australiacash` by default, or specify the file location with `-conf`.
+Configuration can be persisted by creating a `taustraliacash.conf` file. Create it in the directory defined with the `datadir` setting, `$HOME/.taustraliacash` by default, or specify the file location with `-conf`.
 
-**australiacash.conf example :**
+**taustraliacash.conf example :**
 ```
 daemon=1
 server=1
@@ -328,41 +328,41 @@ paytxfee=0.01
 sendfreetransactions=1
 maxconnections=150
 ```
-You can see a more concrete example [here](/contrib/debian/examples/australiacash.conf).
+You can see a more concrete example [here](/contrib/debian/examples/taustraliacash.conf).
 
 ### Mainnet, testnet and regtest
 
-When trying out new things, for example to test your application that interacts with the AustraliaCash chain, it is recommended to not use the main AustraliaCash network. Multiple networks are built-in for this purpose.
+When trying out new things, for example to test your application that interacts with the tAustraliaCash chain, it is recommended to not use the main tAustraliaCash network. Multiple networks are built-in for this purpose.
 
 **Mainnet** : The main network where real transaction operate.  
 **Testnet** : The test network, with peers.  
 **Regtest** : The regression test network, to test with only local peers and create blocks on-demand.
 
-When not specifying any network, *Mainnet* is the network used by default. To enable *testnet*, use the `australiacashd -testnet`.
+When not specifying any network, *Mainnet* is the network used by default. To enable *testnet*, use the `taustraliacashd -testnet`.
 
 To enable *regtest*, use the `-regtest` option.
 
-> **Tip:** Remember to specify the network when you want to use `australiacash-cli`.
+> **Tip:** Remember to specify the network when you want to use `taustraliacash-cli`.
 
 ### Data directory
 
-The data directory is the location where AustraliaCash Core files are stored, including the wallet, log files and blocks. You can modify the location with the `-datadir` setting.
+The data directory is the location where tAustraliaCash Core files are stored, including the wallet, log files and blocks. You can modify the location with the `-datadir` setting.
 
 **Default location :**
 
 Platform | Data directory path
 ---------|--------------------
-Linux    | `$HOME/.australiacash`
-macOS    | `$HOME/Library/Application Support/AustraliaCash`
-Windows  | `%APPDATA%\AustraliaCash`
+Linux    | `$HOME/.taustraliacash`
+macOS    | `$HOME/Library/Application Support/tAustraliaCash`
+Windows  | `%APPDATA%\tAustraliaCash`
 
-You may need to specify `-datadir` also when using `australiacash-cli`.
+You may need to specify `-datadir` also when using `taustraliacash-cli`.
 
 See the [full documentation on file system](files.md) for more information.
 
 ### RPC credentials
 
-Authentication is required to interact with the RPC interface. When no credentials are provided, AustraliaCash uses a [random cookie](https://bitcoin.org/en/release/v0.12.0#rpc-random-cookie-rpc-authentication) that gets generated when the software is launched. It's possible to define your own credentials using `rpcuser` and `rpcpassword` parameters.
+Authentication is required to interact with the RPC interface. When no credentials are provided, tAustraliaCash uses a [random cookie](https://bitcoin.org/en/release/v0.12.0#rpc-random-cookie-rpc-authentication) that gets generated when the software is launched. It's possible to define your own credentials using `rpcuser` and `rpcpassword` parameters.
 
 ### Ports
 
@@ -377,10 +377,10 @@ To configure them use the `-port` and `-rpcport` parameters.
 
 ### Memory
 
-Running AustraliaCash Core can require a lot of memory, so in some situations it may be necessary to optimize its usage. You can find more information about reducing the memory footprint in the [related guide](reduce-memory.md).
+Running tAustraliaCash Core can require a lot of memory, so in some situations it may be necessary to optimize its usage. You can find more information about reducing the memory footprint in the [related guide](reduce-memory.md).
 
 ### Troubleshooting
 
-By default, AustraliaCash Core keeps detailed logs in the `debug.log` file, located in the `datadir`. Alternatively, the `-printtoconsole` parameter displays the log interactively to the terminal instead.
+By default, tAustraliaCash Core keeps detailed logs in the `debug.log` file, located in the `datadir`. Alternatively, the `-printtoconsole` parameter displays the log interactively to the terminal instead.
 
 To get more verbose log output, you can enable debug mode by using the `-debug=<topic>` parameter to increase logic for a specific topic, or use `-debug=all` to see detailed logs on all topics.

@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package australiacashd/australiacash-qt
-for Debian-based Linux systems. If you compile australiacashd/australiacash-qt yourself, there are some useful files here.
+This directory contains files used to package taustraliacashd/taustraliacash-qt
+for Debian-based Linux systems. If you compile taustraliacashd/taustraliacash-qt yourself, there are some useful files here.
 
-## australiacash: URI support ##
+## taustraliacash: URI support ##
 
 
-australiacash-qt.desktop  (Gnome / Open Desktop)
+taustraliacash-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install australiacash-qt.desktop
+	sudo desktop-file-install taustraliacash-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your australiacash-qt binary to `/usr/bin`
-and the `../../share/pixmaps/australiacash128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your taustraliacash-qt binary to `/usr/bin`
+and the `../../share/pixmaps/taustraliacash128.png` to `/usr/share/pixmaps`
 
-australiacash-qt.protocol (KDE)
+taustraliacash-qt.protocol (KDE)
 

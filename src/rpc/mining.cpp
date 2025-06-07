@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -99,7 +99,7 @@ UniValue getnetworkhashps(const JSONRPCRequest& request)
 
 UniValue generateBlocks(boost::shared_ptr<CReserveScript> coinbaseScript, int nGenerate, uint64_t nMaxTries, bool keepScript, int nMineAuxPow)
 {
-    // AustraliaCash: Never mine witness tx
+    // tAustraliaCash: Never mine witness tx
     const bool fMineWitnessTx = true;
     static const int nInnerLoopCount = 0x10000;
     int nHeightStart = 0;
@@ -221,7 +221,7 @@ UniValue generatetoaddress(const JSONRPCRequest& request)
             "\nMine blocks immediately to a specified address (before the RPC call returns)\n"
             "\nArguments:\n"
             "1. nblocks      (numeric, required) How many blocks are generated immediately.\n"
-            "2. address      (string, required) The address to send the newly generated australiacash to.\n"
+            "2. address      (string, required) The address to send the newly generated taustraliacash to.\n"
             "3. maxtries     (numeric, optional) How many iterations to try (default = 1000000).\n"
             "4. auxpow       (numeric, optional) If the block should include the auxpow header (default = 0).\n"
             "\nResult:\n"
@@ -353,7 +353,7 @@ std::string gbt_vb_name(const Consensus::DeploymentPos pos) {
 
 UniValue getblocktemplate(const JSONRPCRequest& request)
 {
-    // AustraliaCash: Never mine witness tx
+    // tAustraliaCash: Never mine witness tx
     const bool fMineWitnessTx = true;
     if (request.fHelp || request.params.size() > 1)
         throw runtime_error(
@@ -504,10 +504,10 @@ UniValue getblocktemplate(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
 
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0)
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "AustraliaCash is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "tAustraliaCash is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "AustraliaCash is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "tAustraliaCash is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;
 
@@ -993,11 +993,11 @@ void AuxMiningCheck()
         throw JSONRPCError(RPC_CLIENT_P2P_DISABLED, "Error: Peer-to-peer functionality missing or disabled");
 
     if (g_connman->GetNodeCount(CConnman::CONNECTIONS_ALL) == 0 && !Params().MineBlocksOnDemand())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "AustraliaCash is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "tAustraliaCash is not connected!");
 
     if (IsInitialBlockDownload() && !Params().MineBlocksOnDemand())
         throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD,
-                           "AustraliaCash is downloading blocks...");
+                           "tAustraliaCash is downloading blocks...");
 
     /* This should never fail, since the chain is already
        past the point of merge-mining start.  Check nevertheless. This  */
@@ -1020,12 +1020,12 @@ static UniValue AuxMiningCreateBlock(const CScript& scriptPubKey)
     static std::map<CScriptID, CBlock*> curBlocks;
     static unsigned nExtraNonce = 0;
 
-    // AustraliaCash: Never mine witness tx
+    // tAustraliaCash: Never mine witness tx
     const bool fMineWitnessTx = false;
 
     /* Search for cached blocks with given scriptPubKey and assign it to pBlock
      * if we find a match. This allows for creating multiple aux templates with
-     * a single australiacashd instance, for example when a pool runs multiple sub-
+     * a single taustraliacashd instance, for example when a pool runs multiple sub-
      * pools with different payout strategies.
      */
     CBlock* pblock = nullptr;
@@ -1188,7 +1188,7 @@ UniValue getauxblockbip22(const JSONRPCRequest& request)
         static unsigned nExtraNonce = 0;
 
         // Update block
-        // AustraliaCash: Never mine witness tx
+        // tAustraliaCash: Never mine witness tx
         const bool fMineWitnessTx = false;
         {
             LOCK(cs_main);

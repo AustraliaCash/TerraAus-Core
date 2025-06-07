@@ -6,7 +6,7 @@
 #include "chainparams.h"
 #include "coins.h"
 #include "consensus/merkle.h"
-#include "australiacash.h"
+#include "taustraliacash.h"
 #include "primitives/block.h"
 #include "script/script.h"
 #include "uint256.h"
@@ -362,7 +362,7 @@ BOOST_AUTO_TEST_CASE(auxpow_pow)
     mineBlock(block, true);
     BOOST_CHECK(CheckAuxPowProofOfWork(block, params));
 
-    // AustraliaCash block version 2 can be both AuxPoW and regular, so test 3
+    // tAustraliaCash block version 2 can be both AuxPoW and regular, so test 3
 
     block.nVersion = 3;
     mineBlock(block, true);

@@ -1,9 +1,9 @@
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_AUSCOIN_FEES_H
-#define BITCOIN_AUSCOIN_FEES_H
+#ifndef BITCOIN_tAUSCOIN_FEES_H
+#define BITCOIN_tAUSCOIN_FEES_H
 
 #include "amount.h"
 #include "chain.h"
@@ -22,10 +22,10 @@ enum FeeRatePreset
 };
 
 /** Estimate fee rate needed to get into the next nBlocks */
-CFeeRate GetAustraliaCashFeeRate(int priority);
-const std::string GetAustraliaCashPriorityLabel(int priority);
+CFeeRate GettAustraliaCashFeeRate(int priority);
+const std::string GettAustraliaCashPriorityLabel(int priority);
 #endif // ENABLE_WALLET
-CAmount GetAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
-CAmount GetAustraliaCashDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit);
+CAmount GettAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree);
+CAmount GettAustraliaCashDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit);
 
-#endif // BITCOIN_AUSCOIN_FEES_H
+#endif // BITCOIN_tAUSCOIN_FEES_H

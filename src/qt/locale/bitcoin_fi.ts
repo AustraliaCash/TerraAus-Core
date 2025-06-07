@@ -99,11 +99,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your tAustraliaCash addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>These are your AustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your tAustraliaCash addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -205,7 +205,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AUSCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR tAUSCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -217,7 +217,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your australiacashs from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your taustraliacashs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -359,8 +359,8 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
-        <source>Send coins to a AustraliaCash address</source>
-        <translation>Lähetä kolikoita AustraliaCash-osoitteeseen</translation>
+        <source>Send coins to a tAustraliaCash address</source>
+        <translation>Lähetä kolikoita tAustraliaCash-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -383,8 +383,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>AustraliaCash</source>
-        <translation>AustraliaCash</translation>
+        <source>tAustraliaCash</source>
+        <translation>tAustraliaCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -404,19 +404,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota AustraliaCash-ikkuna</translation>
+        <translation>Näytä tai piilota tAustraliaCash-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your AustraliaCash addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla AustraliaCash -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your tAustraliaCash addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla tAustraliaCash -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified AustraliaCash addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä AustraliaCash -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified tAustraliaCash addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä tAustraliaCash -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -435,8 +435,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and australiacash: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja australiacash: URIt)</translation>
+        <source>Request payments (generates QR codes and taustraliacash: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja taustraliacash: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -447,18 +447,18 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a australiacash: URI or payment request</source>
-        <translation>Avaa australiacash: URI tai maksupyyntö</translation>
+        <source>Open a taustraliacash: URI or payment request</source>
+        <translation>Avaa taustraliacash: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to AustraliaCash network</source>
+        <source>%n active connection(s) to tAustraliaCash network</source>
         <translation>
-            <numerusform>%n aktiivinen yhteys AustraliaCash-verkkoon</numerusform>
-            <numerusform>%n aktiivista yhteyttä AustraliaCash-verkkoon</numerusform>
+            <numerusform>%n aktiivinen yhteys tAustraliaCash-verkkoon</numerusform>
+            <numerusform>%n aktiivista yhteyttä tAustraliaCash-verkkoon</numerusform>
         </translation>
     </message>
     <message>
@@ -505,8 +505,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible AustraliaCash command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista AustraliaCashin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible tAustraliaCash command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista tAustraliaCashin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -583,7 +583,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import a AustraliaCash private key</source>
+        <source>Import a tAustraliaCash private key</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -619,7 +619,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. AustraliaCash can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. tAustraliaCash can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -813,7 +813,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid AustraliaCash address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid tAustraliaCash address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -985,8 +985,8 @@
         <translation>Tämä on ensimmäinen kerta, kun %1 on käynnistetty, joten voit valita data-hakemiston paikan.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the AustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 lataa ja tallentaa kopion AustraliaCashin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
+        <source>%1 will download and store a copy of the tAustraliaCash block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 lataa ja tallentaa kopion tAustraliaCashin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1038,11 +1038,11 @@
         <translation>Piilota</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the australiacash network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the taustraliacash network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attempting to spend australiacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend taustraliacashs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1192,16 +1192,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the AustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa AustraliaCash-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the tAustraliaCash client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa tAustraliaCash-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä AustraliaCash-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the tAustraliaCash network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä tAustraliaCash-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1240,8 +1240,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the AustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä AustraliaCash-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the tAustraliaCash network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä tAustraliaCash-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1277,11 +1277,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona australiacash-määrät näytetään</translation>
+        <translation>Yksikkö jona taustraliacash-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti australiacash-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti taustraliacash-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1355,8 +1355,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the AustraliaCash network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu AustraliaCash-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the tAustraliaCash network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu tAustraliaCash-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1396,7 +1396,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien AustraliaCashien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien tAustraliaCashien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1463,11 +1463,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>To see ongoing development and contribute, check out the AustraliaCash Core repository on GitHub</source>
+        <source>To see ongoing development and contribute, check out the tAustraliaCash Core repository on GitHub</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Services that claim to double your australiacashs are always ponzi schemes</source>
+        <source>Services that claim to double your taustraliacashs are always ponzi schemes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1582,7 +1582,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of AUS you wish to send to each wallet:</source>
+        <source>The paper wallet printing process has begun.&lt;br/&gt;Please wait for the wallets to print completely and verify that everything printed correctly.&lt;br/&gt;Check for misalignments, ink bleeding, smears, or anything else that could make the private keys unreadable.&lt;br/&gt;Now, enter the number of tAUS you wish to send to each wallet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1595,7 +1595,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Lähetä AustraliaCasheja</translation>
+        <translation type="unfinished">Lähetä tAustraliaCasheja</translation>
     </message>
     <message>
         <source>The recipient address is not valid, please recheck.</source>
@@ -1653,7 +1653,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot start australiacash: click-to-pay handler</source>
+        <source>Cannot start taustraliacash: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1669,7 +1669,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid AustraliaCash address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid tAustraliaCash address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1802,8 +1802,8 @@ p, li { white-space: pre-wrap; }
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a AustraliaCash address (e.g. %1)</source>
-        <translation>Syötä AustraliaCash-osoite (esim. %1)</translation>
+        <source>Enter a tAustraliaCash address (e.g. %1)</source>
+        <translation>Syötä tAustraliaCash-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2288,8 +2288,8 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Uudelleenkäytä vastaanotto-osoitetta (ei suositella)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the AustraliaCash network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä AustraliaCash-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the tAustraliaCash network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä tAustraliaCash-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2442,7 +2442,7 @@ p, li { white-space: pre-wrap; }
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä AustraliaCasheja</translation>
+        <translation>Lähetä tAustraliaCasheja</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2585,7 +2585,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for australiacash transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for taustraliacash transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2693,7 +2693,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Warning: Invalid AustraliaCash address</source>
+        <source>Warning: Invalid tAustraliaCash address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2736,8 +2736,8 @@ p, li { white-space: pre-wrap; }
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to send the payment to</source>
-        <translation>AustraliaCash-osoite johon maksu lähetetään</translation>
+        <source>The tAustraliaCash address to send the payment to</source>
+        <translation>tAustraliaCash-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2756,8 +2756,8 @@ p, li { white-space: pre-wrap; }
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less australiacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän australiacasheja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less taustraliacashs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän taustraliacasheja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2780,8 +2780,8 @@ p, li { white-space: pre-wrap; }
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the australiacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the AustraliaCash network.</source>
-        <translation>Viesti joka liitettiin australiacash: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä AustraliaCash-verkkoon.</translation>
+        <source>A message that was attached to the taustraliacash: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the tAustraliaCash network.</source>
+        <translation>Viesti joka liitettiin taustraliacash: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä tAustraliaCash-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2825,8 +2825,8 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The AustraliaCash address to sign the message with</source>
-        <translation>AustraliaCash-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The tAustraliaCash address to sign the message with</source>
+        <translation>tAustraliaCash-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2857,8 +2857,8 @@ p, li { white-space: pre-wrap; }
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this AustraliaCash address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän AustraliaCash-osoitteen</translation>
+        <source>Sign the message to prove you own this tAustraliaCash address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän tAustraliaCash-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2877,12 +2877,12 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The AustraliaCash address the message was signed with</source>
-        <translation>AustraliaCash-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The tAustraliaCash address the message was signed with</source>
+        <translation>tAustraliaCash-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified AustraliaCash address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä AustraliaCash-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified tAustraliaCash address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä tAustraliaCash-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2893,7 +2893,7 @@ p, li { white-space: pre-wrap; }
         <translation>Tyhjennä kaikki varmista-viesti-kentät</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive australiacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive taustraliacashs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3469,7 +3469,7 @@ p, li { white-space: pre-wrap; }
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Lähetä AustraliaCasheja</translation>
+        <translation type="unfinished">Lähetä tAustraliaCasheja</translation>
     </message>
 </context>
 <context>
@@ -3566,8 +3566,8 @@ p, li { white-space: pre-wrap; }
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>AustraliaCash Core</source>
-        <translation>AustraliaCash-ydin</translation>
+        <source>tAustraliaCash Core</source>
+        <translation>tAustraliaCash-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -4110,7 +4110,7 @@ p, li { white-space: pre-wrap; }
         <translation>Virhe</translation>
     </message>
     <message>
-        <source>Bitcoin Core and AustraliaCash Core</source>
+        <source>Bitcoin Core and tAustraliaCash Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

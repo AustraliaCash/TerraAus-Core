@@ -24,23 +24,23 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAG
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBAUSCOIN_SERVER=libaustraliacash_server.a
-LIBAUSCOIN_COMMON=libaustraliacash_common.a
-LIBAUSCOIN_CONSENSUS=libaustraliacash_consensus.a
-LIBAUSCOIN_CLI=libaustraliacash_cli.a
-LIBAUSCOIN_UTIL=libaustraliacash_util.a
-LIBAUSCOIN_CRYPTO=crypto/libaustraliacash_crypto.a
-LIBAUSCOINQT=qt/libaustraliacashqt.a
+LIBtAUSCOIN_SERVER=libtaustraliacash_server.a
+LIBtAUSCOIN_COMMON=libtaustraliacash_common.a
+LIBtAUSCOIN_CONSENSUS=libtaustraliacash_consensus.a
+LIBtAUSCOIN_CLI=libtaustraliacash_cli.a
+LIBtAUSCOIN_UTIL=libtaustraliacash_util.a
+LIBtAUSCOIN_CRYPTO=crypto/libtaustraliacash_crypto.a
+LIBtAUSCOINQT=qt/libtaustraliacashqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBAUSCOIN_ZMQ=libaustraliacash_zmq.a
+LIBtAUSCOIN_ZMQ=libtaustraliacash_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBAUSCOINCONSENSUS=libaustraliacashconsensus.la
+LIBtAUSCOINCONSENSUS=libtaustraliacashconsensus.la
 endif
 if ENABLE_WALLET
-LIBAUSCOIN_WALLET=libaustraliacash_wallet.a
+LIBtAUSCOIN_WALLET=libtaustraliacash_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -49,16 +49,16 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBAUSCOIN_CRYPTO) \
-  $(LIBAUSCOIN_UTIL) \
-  $(LIBAUSCOIN_COMMON) \
-  $(LIBAUSCOIN_CONSENSUS) \
-  $(LIBAUSCOIN_SERVER) \
-  $(LIBAUSCOIN_CLI) \
-  $(LIBAUSCOIN_WALLET) \
-  $(LIBAUSCOIN_ZMQ)
+  $(LIBtAUSCOIN_CRYPTO) \
+  $(LIBtAUSCOIN_UTIL) \
+  $(LIBtAUSCOIN_COMMON) \
+  $(LIBtAUSCOIN_CONSENSUS) \
+  $(LIBtAUSCOIN_SERVER) \
+  $(LIBtAUSCOIN_CLI) \
+  $(LIBtAUSCOIN_WALLET) \
+  $(LIBtAUSCOIN_ZMQ)
 
-lib_LTLIBRARIES = $(LIBAUSCOINCONSENSUS)
+lib_LTLIBRARIES = $(LIBtAUSCOINCONSENSUS)
 
 bin_PROGRAMS =
 noinst_PROGRAMS =
@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += australiacashd
+  bin_PROGRAMS += taustraliacashd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += australiacash-cli australiacash-tx
+  bin_PROGRAMS += taustraliacash-cli taustraliacash-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -99,10 +99,10 @@ BITCOIN_CORE_H = \
   core_io.h \
   core_memusage.h \
   cuckoocache.h \
-  australiacash.cpp \
-  australiacash.h \
-  australiacash-fees.cpp \
-  australiacash-fees.h \
+  taustraliacash.cpp \
+  taustraliacash.h \
+  taustraliacash-fees.cpp \
+  taustraliacash-fees.h \
   httprpc.h \
   httpserver.h \
   indirectmap.h \
@@ -177,12 +177,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libaustraliacash_util_a-clientversion.$(OBJEXT): obj/build.h
+libtaustraliacash_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between bitcoind and bitcoin-qt
-libaustraliacash_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libaustraliacash_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_server_a_SOURCES = \
+libtaustraliacash_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libtaustraliacash_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_server_a_SOURCES = \
   addrman.cpp \
   addrdb.cpp \
   bloom.cpp \
@@ -221,9 +221,9 @@ libaustraliacash_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libaustraliacash_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libaustraliacash_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_zmq_a_SOURCES = \
+libtaustraliacash_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libtaustraliacash_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
@@ -232,9 +232,9 @@ endif
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
 # when wallet enabled
-libaustraliacash_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libaustraliacash_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_wallet_a_SOURCES = \
+libtaustraliacash_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtaustraliacash_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -246,9 +246,9 @@ libaustraliacash_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libaustraliacash_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libaustraliacash_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libaustraliacash_crypto_a_SOURCES = \
+crypto_libtaustraliacash_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
+crypto_libtaustraliacash_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libtaustraliacash_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -268,9 +268,9 @@ crypto_libaustraliacash_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libaustraliacash_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libaustraliacash_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_consensus_a_SOURCES = \
+libtaustraliacash_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtaustraliacash_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -305,9 +305,9 @@ libaustraliacash_consensus_a_SOURCES = \
   version.h
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
-libaustraliacash_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libaustraliacash_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_common_a_SOURCES = \
+libtaustraliacash_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtaustraliacash_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_common_a_SOURCES = \
   amount.cpp \
   arith_uint256.cpp \
   auxpow.cpp \
@@ -334,9 +334,9 @@ libaustraliacash_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libaustraliacash_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libaustraliacash_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_util_a_SOURCES = \
+libtaustraliacash_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtaustraliacash_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -356,99 +356,99 @@ libaustraliacash_util_a_SOURCES = \
 
 if GLIBC_BACK_COMPAT
 
-libaustraliacash_util_a_SOURCES += compat/glibc_compat.cpp
+libtaustraliacash_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 
 endif
 
 # cli: shared between bitcoin-cli and bitcoin-qt
-libaustraliacash_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libaustraliacash_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libaustraliacash_cli_a_SOURCES = \
+libtaustraliacash_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libtaustraliacash_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacash_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libaustraliacash_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libtaustraliacash_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-australiacashd_SOURCES = bitcoind.cpp
-australiacashd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-australiacashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-australiacashd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+taustraliacashd_SOURCES = bitcoind.cpp
+taustraliacashd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+taustraliacashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+taustraliacashd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-australiacashd_SOURCES += bitcoind-res.rc
+taustraliacashd_SOURCES += bitcoind-res.rc
 endif
 
-australiacashd_LDADD = \
-  $(LIBAUSCOIN_SERVER) \
-  $(LIBAUSCOIN_COMMON) \
+taustraliacashd_LDADD = \
+  $(LIBtAUSCOIN_SERVER) \
+  $(LIBtAUSCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBAUSCOIN_UTIL) \
-  $(LIBAUSCOIN_WALLET) \
-  $(LIBAUSCOIN_ZMQ) \
-  $(LIBAUSCOIN_CONSENSUS) \
-  $(LIBAUSCOIN_CRYPTO) \
+  $(LIBtAUSCOIN_UTIL) \
+  $(LIBtAUSCOIN_WALLET) \
+  $(LIBtAUSCOIN_ZMQ) \
+  $(LIBtAUSCOIN_CONSENSUS) \
+  $(LIBtAUSCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-australiacashd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+taustraliacashd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-australiacash_cli_SOURCES = bitcoin-cli.cpp
-australiacash_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-australiacash_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-australiacash_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+taustraliacash_cli_SOURCES = bitcoin-cli.cpp
+taustraliacash_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+taustraliacash_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+taustraliacash_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-australiacash_cli_SOURCES += bitcoin-cli-res.rc
+taustraliacash_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-australiacash_cli_LDADD = \
-  $(LIBAUSCOIN_CLI) \
+taustraliacash_cli_LDADD = \
+  $(LIBtAUSCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBAUSCOIN_UTIL) \
-  $(LIBAUSCOIN_CRYPTO)
+  $(LIBtAUSCOIN_UTIL) \
+  $(LIBtAUSCOIN_CRYPTO)
 
-australiacash_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+taustraliacash_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-australiacash_tx_SOURCES = bitcoin-tx.cpp
-australiacash_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-australiacash_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-australiacash_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+taustraliacash_tx_SOURCES = bitcoin-tx.cpp
+taustraliacash_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+taustraliacash_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+taustraliacash_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-australiacash_tx_SOURCES += bitcoin-tx-res.rc
+taustraliacash_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-australiacash_tx_LDADD = \
+taustraliacash_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBAUSCOIN_COMMON) \
-  $(LIBAUSCOIN_UTIL) \
-  $(LIBAUSCOIN_CONSENSUS) \
-  $(LIBAUSCOIN_CRYPTO) \
+  $(LIBtAUSCOIN_COMMON) \
+  $(LIBtAUSCOIN_UTIL) \
+  $(LIBtAUSCOIN_CONSENSUS) \
+  $(LIBtAUSCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-australiacash_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+taustraliacash_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
-libaustraliacashconsensus_la_SOURCES = $(crypto_libaustraliacash_crypto_a_SOURCES) $(libaustraliacash_consensus_a_SOURCES)
+libtaustraliacashconsensus_la_SOURCES = $(crypto_libtaustraliacash_crypto_a_SOURCES) $(libtaustraliacash_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libaustraliacashconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libtaustraliacashconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libaustraliacashconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libaustraliacashconsensus_la_LIBADD = $(LIBSECP256K1)
-libaustraliacashconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libaustraliacashconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libtaustraliacashconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libtaustraliacashconsensus_la_LIBADD = $(LIBSECP256K1)
+libtaustraliacashconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libtaustraliacashconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

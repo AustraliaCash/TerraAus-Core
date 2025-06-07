@@ -1,4 +1,4 @@
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,11 +7,11 @@
 
 #include "policy/policy.h"
 #include "arith_uint256.h"
-#include "australiacash.h"
+#include "taustraliacash.h"
 #include "txmempool.h"
 #include "util.h"
 #include "validation.h"
-#include "australiacash-fees.h"
+#include "taustraliacash-fees.h"
 #include "amount.h"
 #ifdef ENABLE_WALLET
 #include "wallet/wallet.h"
@@ -19,12 +19,12 @@
 
 #ifdef ENABLE_WALLET
 
-CFeeRate GetAustraliaCashFeeRate(int priority)
+CFeeRate GettAustraliaCashFeeRate(int priority)
 {
     switch(priority)
     {
     case SUCH_EXPENSIVE:
-        return CFeeRate(COIN / 100 * 521); // 5.21 AUS, but very carefully avoiding floating point maths
+        return CFeeRate(COIN / 100 * 521); // 5.21 tAUS, but very carefully avoiding floating point maths
     case MANY_GENEROUS:
         return CFeeRate(CWallet::minTxFee.GetFeePerK() * 100);
     case AMAZE:
@@ -40,7 +40,7 @@ CFeeRate GetAustraliaCashFeeRate(int priority)
     return CWallet::minTxFee;
 }
 
-const std::string GetAustraliaCashPriorityLabel(int priority)
+const std::string GettAustraliaCashPriorityLabel(int priority)
 {
     switch(priority)
     {
@@ -64,7 +64,7 @@ const std::string GetAustraliaCashPriorityLabel(int priority)
 
 #endif
 
-CAmount GetAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
+CAmount GettAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowFree)
 {
     {
         LOCK(mempool.cs);
@@ -77,7 +77,7 @@ CAmount GetAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes,
     }
 
     CAmount nMinFee = ::minRelayTxFeeRate.GetFee(nBytes);
-    nMinFee += GetAustraliaCashDustFee(tx.vout, nDustLimit);
+    nMinFee += GettAustraliaCashDustFee(tx.vout, nDustLimit);
 
     if (fAllowFree)
     {
@@ -94,7 +94,7 @@ CAmount GetAustraliaCashMinRelayFee(const CTransaction& tx, unsigned int nBytes,
     return nMinFee;
 }
 
-CAmount GetAustraliaCashDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit) {
+CAmount GettAustraliaCashDustFee(const std::vector<CTxOut> &vout, const CAmount dustLimit) {
     CAmount nFee = 0;
 
     // To limit dust spam, add the dust limit for each output

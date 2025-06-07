@@ -7,17 +7,17 @@ define(_CLIENT_VERSION_BUILD, 00)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2024)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core and AustraliaCash Core]])
-AC_INIT([AustraliaCash Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/AustraliaCash/AustraliaCash-Core/issues],[australiacash],[https://australiacash.org/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Bitcoin Core and tAustraliaCash Core]])
+AC_INIT([tAustraliaCash Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/tAustraliaCash/tAustraliaCash-Core/issues],[taustraliacash],[https://taustraliacash.org/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=australiacashd
-BITCOIN_GUI_NAME=australiacash-qt
-BITCOIN_CLI_NAME=australiacash-cli
-BITCOIN_TX_NAME=australiacash-tx
+BITCOIN_DAEMON_NAME=taustraliacashd
+BITCOIN_GUI_NAME=taustraliacash-qt
+BITCOIN_CLI_NAME=taustraliacash-cli
+BITCOIN_TX_NAME=taustraliacash-tx
 
 AC_CANONICAL_HOST
 
@@ -879,11 +879,11 @@ AC_SUBST(UNIVALUE_LIBS)
 
 BITCOIN_QT_PATH_PROGS([PROTOC], [protoc],$protoc_bin_path)
 
-AC_MSG_CHECKING([whether to build australiacashd])
+AC_MSG_CHECKING([whether to build taustraliacashd])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (australiacash-cli australiacash-tx)])
+AC_MSG_CHECKING([whether to build utils (taustraliacash-cli taustraliacash-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -984,7 +984,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_australiacash-qt])
+  AC_MSG_CHECKING([whether to build test_taustraliacash-qt])
   if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -995,7 +995,7 @@ fi
 
 AM_CONDITIONAL([ENABLE_ZMQ], [test "x$use_zmq" = "xyes"])
 
-AC_MSG_CHECKING([whether to build test_australiacash])
+AC_MSG_CHECKING([whether to build test_taustraliacash])
 if test x$use_tests = xyes; then
   AC_MSG_RESULT([yes])
   BUILD_TEST="yes"

@@ -14,7 +14,7 @@
 #include "libsecp256k1-config.h"
 #endif
 
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
 #include "scalar_low_impl.h"
 #elif defined(USE_SCALAR_4X64)
 #include "scalar_4x64_impl.h"
@@ -33,12 +33,12 @@ static void secp256k1_scalar_get_num(secp256k1_num *r, const secp256k1_scalar *a
 
 /** secp256k1 curve order, see secp256k1_ecdsa_const_order_as_fe in ecdsa_impl.h */
 static void secp256k1_scalar_order_get_num(secp256k1_num *r) {
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
     static const unsigned char order[32] = {
         0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,
-        0,0,0,0,0,0,0,EXHAUSTIVE_TEST_ORDER
+        0,0,0,0,0,0,0,EXHtAUSTIVE_TEST_ORDER
     };
 #else
     static const unsigned char order[32] = {
@@ -53,11 +53,11 @@ static void secp256k1_scalar_order_get_num(secp256k1_num *r) {
 #endif
 
 static void secp256k1_scalar_inverse(secp256k1_scalar *r, const secp256k1_scalar *x) {
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
     int i;
     *r = 0;
-    for (i = 0; i < EXHAUSTIVE_TEST_ORDER; i++)
-        if ((i * *x) % EXHAUSTIVE_TEST_ORDER == 1)
+    for (i = 0; i < EXHtAUSTIVE_TEST_ORDER; i++)
+        if ((i * *x) % EXHtAUSTIVE_TEST_ORDER == 1)
             *r = i;
     /* If this VERIFY_CHECK triggers we were given a noninvertible scalar (and thus
      * have a composite group order; fix it in exhaustive_tests.c). */
@@ -281,7 +281,7 @@ static void secp256k1_scalar_inverse_var(secp256k1_scalar *r, const secp256k1_sc
 }
 
 #ifdef USE_ENDOMORPHISM
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
 /**
  * Find k1 and k2 given k, such that k1 + k2 * lambda == k mod n; unlike in the
  * full case we don't bother making k1 and k2 be small, we just want them to be
@@ -289,8 +289,8 @@ static void secp256k1_scalar_inverse_var(secp256k1_scalar *r, const secp256k1_sc
  * (arbitrarily) set k2 = k + 5 and k1 = k - k2 * lambda.
  */
 static void secp256k1_scalar_split_lambda(secp256k1_scalar *r1, secp256k1_scalar *r2, const secp256k1_scalar *a) {
-    *r2 = (*a + 5) % EXHAUSTIVE_TEST_ORDER;
-    *r1 = (*a + (EXHAUSTIVE_TEST_ORDER - *r2) * EXHAUSTIVE_TEST_LAMBDA) % EXHAUSTIVE_TEST_ORDER;
+    *r2 = (*a + 5) % EXHtAUSTIVE_TEST_ORDER;
+    *r1 = (*a + (EXHtAUSTIVE_TEST_ORDER - *r2) * EXHtAUSTIVE_TEST_LAMBDA) % EXHtAUSTIVE_TEST_ORDER;
 }
 #else
 /**

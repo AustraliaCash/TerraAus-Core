@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/australiacash/australiacash/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/taustraliacash/taustraliacash/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/australiacash/australiacash/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/taustraliacash/taustraliacash/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/australiacash/australiacash/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/taustraliacash/taustraliacash/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 
 ### First time / New builders
@@ -31,12 +31,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/australiacash-core/gitian.sigs.git
-    git clone https://github.com/australiacash-core/australiacash-detached-sigs.git
+    git clone https://github.com/taustraliacash-core/gitian.sigs.git
+    git clone https://github.com/taustraliacash-core/taustraliacash-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/australiacash/australiacash.git
+    git clone https://github.com/taustraliacash/taustraliacash.git
 
-### AustraliaCash maintainers/release engineers, update version in sources
+### tAustraliaCash maintainers/release engineers, update version in sources
 
 Update the following:
 
@@ -75,7 +75,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./australiacash
+    pushd ./taustraliacash
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -109,7 +109,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../australiacash/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../taustraliacash/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -117,50 +117,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url australiacash=/path/to/australiacash,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url taustraliacash=/path/to/taustraliacash,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign AustraliaCash Core for Linux, Windows, and OS X:
+### Build and sign tAustraliaCash Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit australiacash=v${VERSION} ../australiacash/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../australiacash/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/australiacash-*.tar.gz build/out/src/australiacash-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit taustraliacash=v${VERSION} ../taustraliacash/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../taustraliacash/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/taustraliacash-*.tar.gz build/out/src/taustraliacash-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit australiacash=v${VERSION} ../australiacash/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../australiacash/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/australiacash-*-win-unsigned.tar.gz inputs/australiacash-win-unsigned.tar.gz
-    mv build/out/australiacash-*.zip build/out/australiacash-*.exe ../
+    ./bin/gbuild --memory 3000 --commit taustraliacash=v${VERSION} ../taustraliacash/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../taustraliacash/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/taustraliacash-*-win-unsigned.tar.gz inputs/taustraliacash-win-unsigned.tar.gz
+    mv build/out/taustraliacash-*.zip build/out/taustraliacash-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit australiacash=v${VERSION} ../australiacash/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../australiacash/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/australiacash-*-osx-unsigned.tar.gz inputs/australiacash-osx-unsigned.tar.gz
-    mv build/out/australiacash-*.tar.gz build/out/australiacash-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit taustraliacash=v${VERSION} ../taustraliacash/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../taustraliacash/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/taustraliacash-*-osx-unsigned.tar.gz inputs/taustraliacash-osx-unsigned.tar.gz
+    mv build/out/taustraliacash-*.tar.gz build/out/taustraliacash-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`australiacash-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`australiacash-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`australiacash-${VERSION}-win[32|64]-setup-unsigned.exe`, `australiacash-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`australiacash-${VERSION}-osx-unsigned.dmg`, `australiacash-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`taustraliacash-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`taustraliacash-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`taustraliacash-${VERSION}-win[32|64]-setup-unsigned.exe`, `taustraliacash-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`taustraliacash-${VERSION}-osx-unsigned.dmg`, `taustraliacash-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import australiacash/contrib/gitian-keys/*.pgp
+    gpg --import taustraliacash/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../australiacash/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../australiacash/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../australiacash/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../taustraliacash/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../taustraliacash/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../taustraliacash/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -178,25 +178,25 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [australiacash-detached-sigs](https://github.com/aus/australiacash-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [taustraliacash-detached-sigs](https://github.com/aus/taustraliacash-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../australiacash/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../australiacash/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../australiacash/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/australiacash-osx-signed.dmg ../australiacash-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../taustraliacash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../taustraliacash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../taustraliacash/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/taustraliacash-osx-signed.dmg ../taustraliacash-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../australiacash/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../australiacash/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../australiacash/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/australiacash-*win64-setup.exe ../australiacash-${VERSION}-win64-setup.exe
-    mv build/out/australiacash-*win32-setup.exe ../australiacash-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../taustraliacash/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../taustraliacash/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../taustraliacash/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/taustraliacash-*win64-setup.exe ../taustraliacash-${VERSION}-win64-setup.exe
+    mv build/out/taustraliacash-*win32-setup.exe ../taustraliacash-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -218,23 +218,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-australiacash-${VERSION}-aarch64-linux-gnu.tar.gz
-australiacash-${VERSION}-arm-linux-gnueabihf.tar.gz
-australiacash-${VERSION}-i686-pc-linux-gnu.tar.gz
-australiacash-${VERSION}-x86_64-linux-gnu.tar.gz
-australiacash-${VERSION}-osx64.tar.gz
-australiacash-${VERSION}-osx.dmg
-australiacash-${VERSION}.tar.gz
-australiacash-${VERSION}-win32-setup.exe
-australiacash-${VERSION}-win32.zip
-australiacash-${VERSION}-win64-setup.exe
-australiacash-${VERSION}-win64.zip
+taustraliacash-${VERSION}-aarch64-linux-gnu.tar.gz
+taustraliacash-${VERSION}-arm-linux-gnueabihf.tar.gz
+taustraliacash-${VERSION}-i686-pc-linux-gnu.tar.gz
+taustraliacash-${VERSION}-x86_64-linux-gnu.tar.gz
+taustraliacash-${VERSION}-osx64.tar.gz
+taustraliacash-${VERSION}-osx.dmg
+taustraliacash-${VERSION}.tar.gz
+taustraliacash-${VERSION}-win32-setup.exe
+taustraliacash-${VERSION}-win32.zip
+taustraliacash-${VERSION}-win64-setup.exe
+taustraliacash-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the australiacash.com server, nor put them in the torrent*.
+space *do not upload these to the taustraliacash.com server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -244,23 +244,23 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the australiacash.com Github repo
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the taustraliacash.com Github repo
 
-- Create a [new GitHub release](https://github.com/australiacash/australiacash/releases/new) with a link to the archived release notes.
+- Create a [new GitHub release](https://github.com/taustraliacash/taustraliacash/releases/new) with a link to the archived release notes.
 
-- Update australiacash.com version - Langerhans to do
+- Update taustraliacash.com version - Langerhans to do
 
 - Announce the release:
 
-  - Release sticky on AustraliaCash Forums: http://forum.australiacash.com/forum/news-community/community-announcements
+  - Release sticky on tAustraliaCash Forums: http://forum.taustraliacash.com/forum/news-community/community-announcements
 
-  - AustraliaCash-development mailing list
+  - tAustraliaCash-development mailing list
 
-  - Twitter, reddit /r/australiacash
+  - Twitter, reddit /r/taustraliacash
 
-  - Update title of #australiacash on Freenode IRC
+  - Update title of #taustraliacash on Freenode IRC
 
-  - Announce on reddit /r/australiacash, /r/australiacashdev
+  - Announce on reddit /r/taustraliacash, /r/taustraliacashdev
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

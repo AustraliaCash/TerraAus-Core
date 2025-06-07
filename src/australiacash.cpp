@@ -1,4 +1,4 @@
-// Copyright (c) 2015-2021 The AustraliaCash Core developers
+// Copyright (c) 2015-2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,11 +7,11 @@
 
 #include "policy/policy.h"
 #include "arith_uint256.h"
-#include "australiacash.h"
+#include "taustraliacash.h"
 #include "txmempool.h"
 #include "util.h"
 #include "validation.h"
-#include "australiacash-fees.h"
+#include "taustraliacash-fees.h"
 
 int static generateMTRandom(unsigned int s, int range)
 {
@@ -20,7 +20,7 @@ int static generateMTRandom(unsigned int s, int range)
     return dist(gen);
 }
 
-// AustraliaCash: Normally minimum difficulty blocks can only occur in between
+// tAustraliaCash: Normally minimum difficulty blocks can only occur in between
 // retarget blocks. However, once we introduce Digishield every block is
 // a retarget, so we need to handle minimum difficulty on all blocks.
 bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
@@ -37,7 +37,7 @@ bool AllowDigishieldMinDifficultyForBlock(const CBlockIndex* pindexLast, const C
     return (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*8);
 }
 
-unsigned int CalculateAustraliaCashNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
+unsigned int CalculatetAustraliaCashNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
 {
     int nHeight = pindexLast->nHeight + 1;
     const int64_t retargetTimespan = params.nPowTargetTimespan;
@@ -122,7 +122,7 @@ bool CheckAuxPowProofOfWork(const CBlockHeader& block, const Consensus::Params& 
     return true;
 }
 
-CAmount GetAustraliaCashBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
+CAmount GettAustraliaCashBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
     int halvings5 = (nHeight - 1480000) / (consensusParams.nSubsidyHalvingInterval * 5);

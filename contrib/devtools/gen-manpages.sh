@@ -4,10 +4,10 @@ TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 SRCDIR=${SRCDIR:-$TOPDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$SRCDIR/australiacashd}
-BITCOINCLI=${BITCOINCLI:-$SRCDIR/australiacash-cli}
-BITCOINTX=${BITCOINTX:-$SRCDIR/australiacash-tx}
-BITCOINQT=${BITCOINQT:-$SRCDIR/qt/australiacash-qt}
+BITCOIND=${BITCOIND:-$SRCDIR/taustraliacashd}
+BITCOINCLI=${BITCOINCLI:-$SRCDIR/taustraliacash-cli}
+BITCOINTX=${BITCOINTX:-$SRCDIR/taustraliacash-tx}
+BITCOINQT=${BITCOINQT:-$SRCDIR/qt/taustraliacash-qt}
 
 [ ! -x $BITCOIND ] && echo "$BITCOIND not found or not executable." && exit 1
 
@@ -15,8 +15,8 @@ BITCOINQT=${BITCOINQT:-$SRCDIR/qt/australiacash-qt}
 BTCVER=($($BITCOINCLI --version | head -n1 | awk -F'[ -]' '{ print $6, $7 }'))
 
 # Create a footer file with copyright content.
-# This gets autodetected fine for australiacashd if --version-string is not set,
-# but has different outcomes for australiacash-qt and australiacash-cli.
+# This gets autodetected fine for taustraliacashd if --version-string is not set,
+# but has different outcomes for taustraliacash-qt and taustraliacash-cli.
 echo "[COPYRIGHT]" > footer.h2m
 $BITCOIND --version | sed -n '1!p' >> footer.h2m
 

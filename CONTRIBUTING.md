@@ -1,16 +1,16 @@
-# Contributing to AustraliaCash Core
+# Contributing to tAustraliaCash Core
 
-AustraliaCash Core is open source software, and we would welcome contributions
+tAustraliaCash Core is open source software, and we would welcome contributions
 which improve the state of the software. For those wanting to discuss changes,
 or look for work that needs doing, please see:
 
-* [Help requests](https://github.com/australiacash/australiacash/labels/help%20wanted)
-* [Projects](https://github.com/australiacash/australiacash/projects)
-* [AustraliaCashdev on reddit](https://www.reddit.com/r/australiacashdev/)
+* [Help requests](https://github.com/taustraliacash/taustraliacash/labels/help%20wanted)
+* [Projects](https://github.com/taustraliacash/taustraliacash/projects)
+* [tAustraliaCashdev on reddit](https://www.reddit.com/r/taustraliacashdev/)
 
 ## Branch Strategy
 
-AustraliaCash Core's default branch is intentionally a stable release, so that anyone
+tAustraliaCash Core's default branch is intentionally a stable release, so that anyone
 downloading the code and compiling it gets a stable release. Active development
 occurs on branches named after the version they are targeting, for example the
 1.14.4 branch is named `1.14.4-dev`. When raising PRs, please raise against the
@@ -102,35 +102,35 @@ in the future, they may be removed.
 
 ### Refactoring
 
-AustraliaCash Core is a direct fork of Bitcoin Core and therefore benefits from as
+tAustraliaCash Core is a direct fork of Bitcoin Core and therefore benefits from as
 little refactoring as possible on code that is created upstream. If you see any
 structural issues with upstream code, please propose these fixes for
-[bitcoin/bitcoin](https://github.com/bitcoin/bitcoin) and future AustraliaCash Core
+[bitcoin/bitcoin](https://github.com/bitcoin/bitcoin) and future tAustraliaCash Core
 releases will automatically benefit from these.
 
-When refactoring AustraliaCash-specific code, please keep refactoring requests short,
+When refactoring tAustraliaCash-specific code, please keep refactoring requests short,
 low complexity and easy to verify.
 
 
 ## "Decision Making" Process
 
-The following applies to code changes to AustraliaCash Core, and is not to be
-confused with overall AustraliaCash Network Protocol consensus changes. All consensus
+The following applies to code changes to tAustraliaCash Core, and is not to be
+confused with overall tAustraliaCash Network Protocol consensus changes. All consensus
 changes **must** be ratified by miners; a proposal to implement protocol changes
 does not guarantee activation on the mainnet, not even when a binary gets
 released by maintainers.
 
-Whether a pull request is merged into AustraliaCash Core rests with the repository
+Whether a pull request is merged into tAustraliaCash Core rests with the repository
 maintainers.
 
 Maintainers will take into consideration if a patch is in line with the general
-principles of AustraliaCash; meets the minimum standards for inclusion; and will
+principles of tAustraliaCash; meets the minimum standards for inclusion; and will
 take into account the consensus among frequent contributors.
 
 In general, all pull requests must:
 
   - have a clear use case, fix a demonstrable bug or serve the greater good of
-    AustraliaCash;
+    tAustraliaCash;
   - be peer reviewed;
   - have unit tests and functional tests;
   - follow code style guidelines;
@@ -160,11 +160,11 @@ there is consensus to merge a pull request.
 
 Maintainers reserve the right to weigh the opinions of peer reviewers
 using common sense judgement and also may weight based on meritocracy: Those
-that have demonstrated a deeper commitment and understanding towards AustraliaCash
+that have demonstrated a deeper commitment and understanding towards tAustraliaCash
 (over time) or have clear domain expertise may naturally have more weight, as
 one would expect in all walks of life.
 
-Where a patch set proposes to change the AustraliaCash consensus, it must have been
+Where a patch set proposes to change the tAustraliaCash consensus, it must have been
 discussed extensively, be accompanied by widely discussed documentation and have
 a generally widely perceived technical consensus of being a worthwhile change,
 based on the judgement of the maintainers.

@@ -1,9 +1,9 @@
-AustraliaCash Core 0.14.2
+tAustraliaCash Core 0.14.2
 =====================
 
 Development
 ---------------------
-The AustraliaCash repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The tAustraliaCash repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -18,8 +18,8 @@ The AustraliaCash repo's [root README](/README.md) contains relevant information
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [AustraliaCash thread](https://bitcointalk.org/index.php?topic=361813.0).
-* Discuss on [#australiacash-dev](http://webchat.freenode.net/?channels=australiacash-dev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=australiacash-dev).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/) forums, in the [tAustraliaCash thread](https://bitcointalk.org/index.php?topic=361813.0).
+* Discuss on [#taustraliacash-dev](http://webchat.freenode.net/?channels=taustraliacash-dev) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=taustraliacash-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
@@ -33,6 +33,6 @@ The AustraliaCash repo's [root README](/README.md) contains relevant information
 License
 ---------------------
 Distributed under the [MIT software license](/COPYING).
-This product includes software developed by the Bitcoin developers for use in [AustraliaCash Core](https://www.bitcoin.org/). 
+This product includes software developed by the Bitcoin developers for use in [tAustraliaCash Core](https://www.bitcoin.org/). 
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](https://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.

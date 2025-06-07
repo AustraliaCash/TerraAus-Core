@@ -8,7 +8,7 @@
 #include "auxpow.h"
 #include "arith_uint256.h"
 #include "chain.h"
-#include "australiacash.h"
+#include "taustraliacash.h"
 #include "primitives/block.h"
 #include "uint256.h"
 #include "util.h"
@@ -32,7 +32,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
 
-    // AustraliaCash: Special rules for minimum difficulty blocks with Digishield
+    // tAustraliaCash: Special rules for minimum difficulty blocks with Digishield
     if (AllowDigishieldMinDifficultyForBlock(pindexLast, pblock, params))
     {
         // Special difficulty rule for testnet:
@@ -79,7 +79,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     const CBlockIndex* pindexFirst = pindexLast->GetAncestor(nHeightFirst);
     assert(pindexFirst);
 
-    return CalculateAustraliaCashNextWorkRequired(pindexLast, pindexFirst->GetBlockTime(), params);
+    return CalculatetAustraliaCashNextWorkRequired(pindexLast, pindexFirst->GetBlockTime(), params);
 }
 
 unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)

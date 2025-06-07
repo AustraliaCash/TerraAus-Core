@@ -1,5 +1,5 @@
 ---
-name: "australiacash-dmg-signer"
+name: "taustraliacash-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/australiacash/australiacash-detached-sigs.git"
+- "url": "https://github.com/taustraliacash/taustraliacash-detached-sigs.git"
   "dir": "signature"
 files:
-- "australiacash-osx-unsigned.tar.gz"
+- "taustraliacash-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=australiacash-osx-unsigned.tar.gz
-  SIGNED=australiacash-osx-signed.dmg
+  UNSIGNED=taustraliacash-osx-unsigned.tar.gz
+  SIGNED=taustraliacash-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

@@ -1,5 +1,5 @@
 // Copyright (c) 2012-2016 The Bitcoin Core developers
-// Copyright (c) 2022 The AustraliaCash Core developers
+// Copyright (c) 2022 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -496,7 +496,7 @@ BOOST_FIXTURE_TEST_CASE(importwallet_rescan, TestChain240Setup)
 
 BOOST_AUTO_TEST_CASE(GetMinimumFee_test)
 {
-    uint64_t value = 1000 * COIN; // 1,000 AUS
+    uint64_t value = 1000 * COIN; // 1,000 tAUS
 
     CMutableTransaction tx;
     CTxMemPool pool(payTxFee);

@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2018 The AustraliaCash Core developers
+// Copyright (c) 2018 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -45,11 +45,11 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("MAUS");
-    case kBTC: return QString("kAUS");
-    case BTC: return QString("AUS");
-    case mBTC: return QString("mAUS");
-    case uBTC: return QString::fromUtf8("μAUS");
+    case MBTC: return QString("MtAUS");
+    case kBTC: return QString("ktAUS");
+    case BTC: return QString("tAUS");
+    case mBTC: return QString("mtAUS");
+    case uBTC: return QString::fromUtf8("μtAUS");
     default: return QString("???");
     }
 }
@@ -58,11 +58,11 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("Mega-AustraliaCashs (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case kBTC: return QString("Kilo-AustraliaCashs (1" THIN_SP_UTF8 "000)");
-    case BTC: return QString("AustraliaCashs");
-    case mBTC: return QString("Milli-AustraliaCashs (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-AustraliaCashs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case MBTC: return QString("Mega-tAustraliaCashs (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case kBTC: return QString("Kilo-tAustraliaCashs (1" THIN_SP_UTF8 "000)");
+    case BTC: return QString("tAustraliaCashs");
+    case mBTC: return QString("Milli-tAustraliaCashs (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-tAustraliaCashs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

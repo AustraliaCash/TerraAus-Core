@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>australiacash.icns</string>
+  <string>taustraliacash.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>AustraliaCash-Qt</string>
+  <string>tAustraliaCash-Qt</string>
 
   <key>CFBundleName</key>
-  <string>AustraliaCash-Qt</string>
+  <string>tAustraliaCash-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>com.australiacash.AustraliaCash-Qt</string>
+  <string>com.taustraliacash.tAustraliaCash-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>com.australiacash.AustraliaCashPayment</string>
+      <string>com.taustraliacash.tAustraliaCashPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>australiacash</string>
+        <string>taustraliacash</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>com.australiacash.paymentrequest</string>
+      <string>com.taustraliacash.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>AustraliaCash payment request</string>
+      <string>tAustraliaCash payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/australiacash-paymentrequest</string>
+        <string>application/taustraliacash-paymentrequest</string>
         <key>public.filename-extension</key>
         <array>
-          <string>australiacashpaymentrequest</string>
+          <string>taustraliacashpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>com.australiacash.paymentrequest</string>
+        <string>com.taustraliacash.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

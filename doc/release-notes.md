@@ -1,30 +1,30 @@
-AustraliaCash Core version 1.14.6 is now available from:
+tAustraliaCash Core version 1.14.6 is now available from:
 
-  <https://github.com/australiacash/australiacash/releases/tag/v1.14.6/>
+  <https://github.com/taustraliacash/taustraliacash/releases/tag/v1.14.6/>
 
 This is a new minor version release, including important security updates and
-changes to network efficiency. All AustraliaCash Core users - miners, services,
+changes to network efficiency. All tAustraliaCash Core users - miners, services,
 relay operators and wallet users - are strongly recommended to upgrade.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/australiacash/australiacash/issues>
+  <https://github.com/taustraliacash/taustraliacash/issues>
 
 To receive notifications about updates, subscribe to the release mailing list:
 
-  <https://sourceforge.net/projects/australiacash/lists/australiacash-releases>
+  <https://sourceforge.net/projects/taustraliacash/lists/taustraliacash-releases>
 
 Releases are also announced on reddit:
 
-  <https://www.reddit.com/r/australiacashdev/>
+  <https://www.reddit.com/r/taustraliacashdev/>
 
 Compatibility
 ==============
 
-AustraliaCash Core is extensively tested on Ubuntu Server LTS, Intel-based macOS
+tAustraliaCash Core is extensively tested on Ubuntu Server LTS, Intel-based macOS
 and Windows 10.
 
-AustraliaCash Core should also work on most other Unix-like systems but is not
+tAustraliaCash Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable changes
@@ -67,19 +67,19 @@ Fee Recommendation
 ------------------
 
 This release changes the recommended dust limit for all participants on the
-AustraliaCash network from 1 AUS to 0.01 AUS. The full recommendation can be found
+tAustraliaCash network from 1 tAUS to 0.01 tAUS. The full recommendation can be found
 [in the documentation](fee-recommendation.md).
 
 This change has been implemented in the wallet as the default value of
 `-discardthreshold`, resulting in the following default logic:
 
-1. The wallet will attempt to not create any outputs smaller than 0.03 AUS as
+1. The wallet will attempt to not create any outputs smaller than 0.03 tAUS as
    change if possible.
-2. If after signing there is more than 0.01 AUS left in the change output, the
+2. If after signing there is more than 0.01 tAUS left in the change output, the
    wallet will keep the output as-is.
-3. If the change output drops under 0.01 AUS, the wallet will discard the
+3. If the change output drops under 0.01 tAUS, the wallet will discard the
    change and instead give it to miners as fee.
-4. Any output under 0.01 AUS will not be accepted as valid by default.
+4. Any output under 0.01 tAUS will not be accepted as valid by default.
 
 Breaking changes
 ----------------
@@ -113,7 +113,7 @@ addresses and return an error.
 Users can remove existing addnode records from the software by running:
 
 ```
-australiacash-cli addnode <address> remove
+taustraliacash-cli addnode <address> remove
 ```
 
 Features
@@ -130,7 +130,7 @@ got lost.
 The method can be called with:
 
 ```
-australiacash-cli liststucktransactions
+taustraliacash-cli liststucktransactions
 ```
 
 ### Add pruning configuration to the UI
@@ -167,7 +167,7 @@ and will automatically adapt to a maximum that the host OS allows.
 To change the maximum number of connections, run:
 
 ```
-australiacash-cli setmaxconnections <desired_amount>
+taustraliacash-cli setmaxconnections <desired_amount>
 ```
 
 ### Improve the traffic graph in the UI
@@ -190,7 +190,7 @@ NOTE: rescanning the blockchain takes a lot of time.
 To use the rescan functionality, use:
 
 ```
-australiacash-cli rescan <start_block>
+taustraliacash-cli rescan <start_block>
 ```
 
 It will inform of the state before and after when the process finishes:
@@ -237,7 +237,7 @@ Significant updates have been provided to the following languages:
 * Tamil
 
 Policies and tooling have been updated to enable translators better in their
-efforts to make AustraliaCash more accessible to people that do not speak English.
+efforts to make tAustraliaCash more accessible to people that do not speak English.
 
 RPC API Changes
 ---------------
@@ -281,7 +281,7 @@ Minor Changes
   stuck transactions based on peer-to-peer traffic, but this does not work
   since 1.14.2, and can be misleading (showing false positives and negatives.)
 * Improved and updated the [bip list](bips.md) documentation that explains the
-  protocol features implemented by AustraliaCash Core.
+  protocol features implemented by tAustraliaCash Core.
 * Greatly improved the `gitian-build` script to ease doing deterministic builds
   for everyone, and the [documentation](gitian-building.md) of that process.
 
@@ -300,7 +300,7 @@ Credit goes to all awesome contributors to this release, alphabetically:
 * Chuanyi
 * Chun Kuan Lee
 * Dakoda Greaves
-* AustraliaCashItalia
+* tAustraliaCashItalia
 * ausspacewizard
 * Ed Tubbs
 * Evan Klitzke

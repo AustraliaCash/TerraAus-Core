@@ -1,4 +1,4 @@
-Source: australiacash
+Source: taustraliacash
 Section: utils
 Priority: optional
 Maintainer: Matt Corallo <matt@mattcorallo.com>
@@ -26,15 +26,15 @@ Build-Depends: debhelper,
  python,
  libzmq3-dev
 Standards-Version: 3.9.2
-Homepage: http://www.australiacash.com/
-Vcs-Git: git://github.com/australiacash/australiacash.git
-Vcs-Browser: http://github.com/australiacash/australiacash
+Homepage: http://www.taustraliacash.com/
+Vcs-Git: git://github.com/taustraliacash/taustraliacash.git
+Vcs-Browser: http://github.com/taustraliacash/taustraliacash
 
-Package: australiacashd
+Package: taustraliacashd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- AustraliaCash is a free open source peer-to-peer electronic cash system that
+ tAustraliaCash is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
@@ -43,31 +43,31 @@ Description: peer-to-peer network based digital currency - daemon
  Full transaction history is stored locally at each client.  This
  requires 20+ GB of space, slowly growing.
  .
- This package provides the daemon, australiacashd, and the CLI tool
- australiacash-cli to interact with the daemon.
+ This package provides the daemon, taustraliacashd, and the CLI tool
+ taustraliacash-cli to interact with the daemon.
 
-Package: australiacash-qt
+Package: taustraliacash-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- AustraliaCash is a free open source peer-to-peer electronic cash system that
+ tAustraliaCash is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
- This package provides AustraliaCash-Qt, a GUI for AustraliaCash based on Qt.
+ This package provides tAustraliaCash-Qt, a GUI for tAustraliaCash based on Qt.
 
-Package: australiacash-tx
+Package: taustraliacash-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- AustraliaCash is a free open source peer-to-peer electronic cash system that
+ tAustraliaCash is a free open source peer-to-peer electronic cash system that
  is completely decentralized, without the need for a central server or
  trusted parties.  Users hold the crypto keys to their own money and
  transact directly with each other, with the help of a P2P network to
  check for double-spending.
  .
- This package provides australiacash-tx, a command-line transaction creation
- tool which can be used without a australiacash daemon.  Some means of
+ This package provides taustraliacash-tx, a command-line transaction creation
+ tool which can be used without a taustraliacash daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

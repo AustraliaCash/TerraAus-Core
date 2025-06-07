@@ -1,12 +1,12 @@
 [Desktop Entry]
-Name=AustraliaCash Core
-Comment=Connect to the AustraliaCash P2P Network
-Comment[de]=Verbinde mit dem AustraliaCash peer-to-peer Netzwerk
-Comment[fr]=AustraliaCash, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=AustraliaCash, eşten eşe kriptografik sanal para birimi
-Exec=australiacash-qt %u
+Name=tAustraliaCash Core
+Comment=Connect to the tAustraliaCash P2P Network
+Comment[de]=Verbinde mit dem tAustraliaCash peer-to-peer Netzwerk
+Comment[fr]=tAustraliaCash, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=tAustraliaCash, eşten eşe kriptografik sanal para birimi
+Exec=taustraliacash-qt %u
 Terminal=false
 Type=Application
-Icon=australiacash128
-MimeType=x-scheme-handler/australiacash;
+Icon=taustraliacash128
+MimeType=x-scheme-handler/taustraliacash;
 Categories=Office;Finance;

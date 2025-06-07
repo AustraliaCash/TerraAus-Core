@@ -1,5 +1,5 @@
 // Copyright (c) 2015 The Bitcoin Core developers
-// Copyright (c) 2018 The AustraliaCash Core developers
+// Copyright (c) 2018 The tAustraliaCash Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -57,7 +57,7 @@ BOOST_AUTO_TEST_CASE(get_next_work_lower_limit_actual)
 }
 
 /* Test the constraint on the upper bound for actual time taken */
-// Replaced by AustraliaCash-specific PoW test
+// Replaced by tAustraliaCash-specific PoW test
 /* BOOST_AUTO_TEST_CASE(get_next_work_upper_limit_actual)
 {
     SelectParams(CBaseChainParams::MAIN);

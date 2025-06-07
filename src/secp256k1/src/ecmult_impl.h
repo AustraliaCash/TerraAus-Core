@@ -13,14 +13,14 @@
 #include "scalar.h"
 #include "ecmult.h"
 
-#if defined(EXHAUSTIVE_TEST_ORDER)
+#if defined(EXHtAUSTIVE_TEST_ORDER)
 /* We need to lower these values for exhaustive tests because
  * the tables cannot have infinities in them (this breaks the
  * affine-isomorphism stuff which tracks z-ratios) */
-#  if EXHAUSTIVE_TEST_ORDER > 128
+#  if EXHtAUSTIVE_TEST_ORDER > 128
 #    define WINDOW_A 5
 #    define WINDOW_G 8
-#  elif EXHAUSTIVE_TEST_ORDER > 8
+#  elif EXHtAUSTIVE_TEST_ORDER > 8
 #    define WINDOW_A 4
 #    define WINDOW_G 4
 #  else

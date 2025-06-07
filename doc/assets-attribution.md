@@ -1,4 +1,4 @@
-The following is a list of assets used in the australiacash source and their proper attribution.
+The following is a list of assets used in the taustraliacash source and their proper attribution.
 
 [Typicons/Stephen Hutchings](http://typicons.com)
 -----------------------
@@ -40,7 +40,7 @@ Other
 
 ### Info
 * Designer: Jonas Schnelli, Bitboy, Stephen Hutchings, Marco Falke
-* AustraliaCash Icon: Based on the original AustraliaCash logo from Christine Ricks
+* tAustraliaCash Icon: Based on the original tAustraliaCash logo from Christine Ricks
 * Network connection icon: Inspired by flow-merge.svg from Stephen Hutchings
 * Some icons are based on Stephan Hutchings Typicons
 * License: MIT
@@ -48,9 +48,9 @@ Other
 ### Assets Used
     src/qt/res/icons/about.png
     src/qt/res/icons/about_qt.png,
-    src/qt/res/icons/australiacash.icns
-    src/qt/res/icons/australiacash.ico,
-    src/qt/res/icons/australiacash.png
+    src/qt/res/icons/taustraliacash.icns
+    src/qt/res/icons/taustraliacash.ico,
+    src/qt/res/icons/taustraliacash.png
     src/qt/res/icons/clock*.png,
     src/qt/res/icons/connect*.png
     src/qt/res/icons/eye_minus.png,

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2021 The AustraliaCash Core developers
+# Copyright (c) 2021 The tAustraliaCash Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -140,7 +140,7 @@ class ReplaceByFeeTest(BitcoinTestFramework):
         else:
             assert(False)
 
-        # Extra 5 AUS fee
+        # Extra 5 tAUS fee
         tx1b = CTransaction()
         tx1b.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         tx1b.vout = [CTxOut(int(6*COIN), CScript([b'b']))]
@@ -174,7 +174,7 @@ class ReplaceByFeeTest(BitcoinTestFramework):
             prevout = COutPoint(int(txid, 16), 0)
 
         # Whether the double-spend is allowed is evaluated by including all
-        # child fees - 400 AUS - so this attempt is rejected.
+        # child fees - 400 tAUS - so this attempt is rejected.
         dbl_tx = CTransaction()
         dbl_tx.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         dbl_tx.vout = [CTxOut(initial_nValue - 300*COIN, CScript([1]))]
@@ -252,7 +252,7 @@ class ReplaceByFeeTest(BitcoinTestFramework):
         else:
             assert(False)
 
-        # 1000 AUS fee is enough
+        # 1000 tAUS fee is enough
         dbl_tx = CTransaction()
         dbl_tx.vin = [CTxIn(tx0_outpoint, nSequence=0)]
         dbl_tx.vout = [CTxOut(initial_nValue - fee*n - 1000*COIN, CScript([1]))]

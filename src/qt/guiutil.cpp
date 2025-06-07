@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -133,7 +133,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a AustraliaCash address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a tAustraliaCash address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -151,8 +151,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no australiacash: URI
-    if(!uri.isValid() || uri.scheme() != QString("australiacash"))
+    // return if URI is not valid or is no taustraliacash: URI
+    if(!uri.isValid() || uri.scheme() != QString("taustraliacash"))
         return false;
 
     SendCoinsRecipient rv;
@@ -212,13 +212,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert australiacash:// to australiacash:
+    // Convert taustraliacash:// to taustraliacash:
     //
-    //    Cannot handle this later, because australiacash:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because taustraliacash:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("australiacash://", Qt::CaseInsensitive))
+    if(uri.startsWith("taustraliacash://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "australiacash:");
+        uri.replace(0, 11, "taustraliacash:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -226,7 +226,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("australiacash:%1").arg(info.address);
+    QString ret = QString("taustraliacash:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -624,10 +624,10 @@ boost::filesystem::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "AustraliaCash.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "tAustraliaCash.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "AustraliaCash (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("AustraliaCash (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "tAustraliaCash (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("tAustraliaCash (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -768,9 +768,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=AustraliaCash\n";
+            optionFile << "Name=tAustraliaCash\n";
         else
-            optionFile << strprintf("Name=AustraliaCash (%s)\n", chain);
+            optionFile << strprintf("Name=tAustraliaCash (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

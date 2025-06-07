@@ -15,10 +15,10 @@
 
 #undef USE_ECMULT_STATIC_PRECOMPUTATION
 
-#ifndef EXHAUSTIVE_TEST_ORDER
+#ifndef EXHtAUSTIVE_TEST_ORDER
 /* see group_impl.h for allowable values */
-#define EXHAUSTIVE_TEST_ORDER 13
-#define EXHAUSTIVE_TEST_LAMBDA 9   /* cube root of 1 mod 13 */
+#define EXHtAUSTIVE_TEST_ORDER 13
+#define EXHtAUSTIVE_TEST_LAMBDA 9   /* cube root of 1 mod 13 */
 #endif
 
 #include "include/secp256k1.h"
@@ -90,7 +90,7 @@ void test_exhaustive_endomorphism(const secp256k1_ge *group, int order) {
     for (i = 0; i < order; i++) {
         secp256k1_ge res;
         secp256k1_ge_mul_lambda(&res, &group[i]);
-        ge_equals_ge(&group[i * EXHAUSTIVE_TEST_LAMBDA % EXHAUSTIVE_TEST_ORDER], &res);
+        ge_equals_ge(&group[i * EXHtAUSTIVE_TEST_LAMBDA % EXHtAUSTIVE_TEST_ORDER], &res);
     }
 }
 #endif
@@ -180,7 +180,7 @@ void test_exhaustive_ecmult(const secp256k1_context *ctx, const secp256k1_ge *gr
 void r_from_k(secp256k1_scalar *r, const secp256k1_ge *group, int k) {
     secp256k1_fe x;
     unsigned char x_bin[32];
-    k %= EXHAUSTIVE_TEST_ORDER;
+    k %= EXHtAUSTIVE_TEST_ORDER;
     x = group[k].x;
     secp256k1_fe_normalize(&x);
     secp256k1_fe_get_b32(x_bin, &x);
@@ -261,7 +261,7 @@ void test_exhaustive_sign(const secp256k1_context *ctx, const secp256k1_ge *grou
                 r_from_k(&expected_r, group, k);
                 CHECK(r == expected_r);
                 CHECK((k * s) % order == (i + r * j) % order ||
-                      (k * (EXHAUSTIVE_TEST_ORDER - s)) % order == (i + r * j) % order);
+                      (k * (EXHtAUSTIVE_TEST_ORDER - s)) % order == (i + r * j) % order);
             }
         }
     }
@@ -278,8 +278,8 @@ void test_exhaustive_sign(const secp256k1_context *ctx, const secp256k1_ge *grou
 
 int main(void) {
     int i;
-    secp256k1_gej groupj[EXHAUSTIVE_TEST_ORDER];
-    secp256k1_ge group[EXHAUSTIVE_TEST_ORDER];
+    secp256k1_gej groupj[EXHtAUSTIVE_TEST_ORDER];
+    secp256k1_ge group[EXHtAUSTIVE_TEST_ORDER];
 
     /* Build context */
     secp256k1_context *ctx = secp256k1_context_create(SECP256K1_CONTEXT_SIGN | SECP256K1_CONTEXT_VERIFY);
@@ -289,7 +289,7 @@ int main(void) {
     /* Generate the entire group */
     secp256k1_gej_set_infinity(&groupj[0]);
     secp256k1_ge_set_gej(&group[0], &groupj[0]);
-    for (i = 1; i < EXHAUSTIVE_TEST_ORDER; i++) {
+    for (i = 1; i < EXHtAUSTIVE_TEST_ORDER; i++) {
         /* Set a different random z-value for each Jacobian point */
         secp256k1_fe z;
         random_fe(&z);
@@ -317,12 +317,12 @@ int main(void) {
 
     /* Run the tests */
 #ifdef USE_ENDOMORPHISM
-    test_exhaustive_endomorphism(group, EXHAUSTIVE_TEST_ORDER);
+    test_exhaustive_endomorphism(group, EXHtAUSTIVE_TEST_ORDER);
 #endif
-    test_exhaustive_addition(group, groupj, EXHAUSTIVE_TEST_ORDER);
-    test_exhaustive_ecmult(ctx, group, groupj, EXHAUSTIVE_TEST_ORDER);
-    test_exhaustive_sign(ctx, group, EXHAUSTIVE_TEST_ORDER);
-    test_exhaustive_verify(ctx, group, EXHAUSTIVE_TEST_ORDER);
+    test_exhaustive_addition(group, groupj, EXHtAUSTIVE_TEST_ORDER);
+    test_exhaustive_ecmult(ctx, group, groupj, EXHtAUSTIVE_TEST_ORDER);
+    test_exhaustive_sign(ctx, group, EXHtAUSTIVE_TEST_ORDER);
+    test_exhaustive_verify(ctx, group, EXHtAUSTIVE_TEST_ORDER);
 
     return 0;
 }

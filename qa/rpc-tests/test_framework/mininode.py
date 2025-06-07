@@ -2,7 +2,7 @@
 # Copyright (c) 2010 ArtForz -- public domain half-a-node
 # Copyright (c) 2012 Jeff Garzik
 # Copyright (c) 2010-2016 The Bitcoin Core developers
-# Copyright (c) 2022 The AustraliaCash Core developers
+# Copyright (c) 2022 The tAustraliaCash Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -49,7 +49,7 @@ MAX_INV_SZ = 50000
 MAX_LOCATOR_SZ = 101
 MAX_BLOCK_BASE_SIZE = 1000000
 
-COIN = 100000000 # mlumin 5/2021: In terms of AustraliaCash, 1 australiacash or 100,000,000 koinu.
+COIN = 100000000 # mlumin 5/2021: In terms of tAustraliaCash, 1 taustraliacash or 100,000,000 koinu.
 
 NODE_NETWORK = (1 << 0)
 NODE_GETUTXO = (1 << 1)

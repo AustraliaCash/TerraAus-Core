@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2021 The AustraliaCash Core developers
+// Copyright (c) 2021 The tAustraliaCash Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -689,7 +689,7 @@ BOOST_AUTO_TEST_CASE(test_IsStandard)
 
     std::string reason;
 
-    // Standard: 1 AUS
+    // Standard: 1 tAUS
     t.vout[0].nValue = COIN;
     BOOST_CHECK(IsStandardTx(t, reason));
 
