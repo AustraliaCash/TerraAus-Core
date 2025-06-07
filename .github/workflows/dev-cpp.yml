@@ -49,7 +49,7 @@ jobs:
         mkdir -p $ARTIFACT_DIR
         mv depends.tar.gz taustraliacash-*.tar.gz $ARTIFACT_DIR
     - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ env.SOURCE_ARTIFACT }}
         path: ${{ env.ARTIFACT_DIR }}
@@ -62,7 +62,7 @@ jobs:
       TEST_LOG_ARTIFACT_DIR: test-logs
     steps:
     - name: Getting Source
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: ${{ env.SOURCE_ARTIFACT }}
     - name: Extract Archives
@@ -87,7 +87,7 @@ jobs:
         mkdir -p $ARTIFACT_DIR
         mv $SOURCE_ARTIFACT/src/{taustraliacash-cli,taustraliacash-tx,taustraliacashd,qt/taustraliacash-qt} $ARTIFACT_DIR
     - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: linux-ubu22-binaries
         path: ${{ env.ARTIFACT_DIR }}
@@ -100,7 +100,7 @@ jobs:
       TEST_LOG_ARTIFACT_DIR: test-logs
     steps:
     - name: Getting Source
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: ${{ env.SOURCE_ARTIFACT }}
     - name: Extract Archives
@@ -125,7 +125,7 @@ jobs:
         mkdir -p $ARTIFACT_DIR
         mv $SOURCE_ARTIFACT/src/{taustraliacash-cli,taustraliacash-tx,taustraliacashd,qt/taustraliacash-qt} $ARTIFACT_DIR
     - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: linux-ubu20-binaries
         path: ${{ env.ARTIFACT_DIR }}
@@ -137,7 +137,7 @@ jobs:
       ARTIFACT_DIR: windows-binaries
     steps:
     - name: Getting Source
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4
       with:
         name: ${{ env.SOURCE_ARTIFACT }}
     - name: Extract Archives
@@ -166,7 +166,7 @@ jobs:
         mkdir -p $ARTIFACT_DIR
         mv $SOURCE_ARTIFACT/src/{taustraliacash-cli.exe,taustraliacash-tx.exe,taustraliacashd.exe,qt/taustraliacash-qt.exe} $ARTIFACT_DIR
     - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: windows-binaries
         path: ${{ env.ARTIFACT_DIR }}
@@ -178,7 +178,7 @@ jobs:
   #     ARTIFACT_DIR: mac-binaries
   #   steps:
   #   - name: Getting Source
-  #     uses: actions/download-artifact@v1
+  #     uses: actions/download-artifact@v4
   #     with:
   #       name: ${{ env.SOURCE_ARTIFACT }}
   #   - name: Extract Archives
@@ -203,7 +203,7 @@ jobs:
   #       mkdir -p $ARTIFACT_DIR
   #       mv $SOURCE_ARTIFACT/src/{taustraliacash-cli,taustraliacash-tx,taustraliacashd,qt/taustraliacash-qt} $ARTIFACT_DIR
   #   - name: Upload Artifact
-  #     uses: actions/upload-artifact@v1
+  #     uses: actions/upload-artifact@v4
   #     with:
   #       name: mac-binaries
   #       path: ${{ env.ARTIFACT_DIR }}
