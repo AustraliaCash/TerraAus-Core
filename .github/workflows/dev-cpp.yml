@@ -82,7 +82,7 @@ jobs:
     - name: Prepare Files for Artifact
       run: |
         mkdir -p $ARTIFACT_DIR
-        mv .src/{taustraliacash-cli,taustraliacash-tx,taustraliacashd,qt/taustraliacash-qt} $ARTIFACT_DIR
+        mv ./src/{taustraliacash-cli,taustraliacash-tx,taustraliacashd,qt/taustraliacash-qt} $ARTIFACT_DIR
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
@@ -120,7 +120,7 @@ jobs:
     - name: Prepare Files for Artifact
       run: |
         mkdir -p $ARTIFACT_DIR
-        mv .src/{taustraliacash-cli.exe,taustraliacash-tx.exe,taustraliacashd.exe,qt/taustraliacash-qt.exe} $ARTIFACT_DIR
+        mv ./src/{taustraliacash-cli.exe,taustraliacash-tx.exe,taustraliacashd.exe,qt/taustraliacash-qt.exe} $ARTIFACT_DIR
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
